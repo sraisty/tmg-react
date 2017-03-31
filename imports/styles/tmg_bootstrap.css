@@ -1,0 +1,58 @@
+
+/* Put a border around left/bottom/right side of tab content area */
+/*
+.tab-content > .tab-pane {
+  display: none;
+}
+/*.tab-content > .active {
+  display: block;
+  border-left: 1px ;
+}*/
+
+/*.tab-pane > .active {
+  border-left: 1px ;
+}*/
+
+nav > .navbar, .tmg-top-nav {
+  margin-bottom: 0;
+}
+
+/* For some reason, the Logo was getting indented to far beause navbar-brand
+ * Has extra padding */
+
+
+.tmg-meet-header {
+  background-color: #EEE;
+}
+
+.tmg-meet-header-title {
+  font-size: 20px;
+  /*padding: 10px 0 10px 0;*/
+}
+/*.navbar-inverse a.navbar-brand {
+  font-size: 24px;
+  color: #ddd;
+}*/
+a.navbar-brand {
+  font-size: 24px;
+}
+.navbar-inverse a.navbar-brand  {
+  color: #ddd;
+}
+
+/* Page Footer */
+footer {
+  color: #888;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 15px;
+  border-width: 1px 0 0 0;
+  border-color: #BBB;
+  border-style: solid;
+}
+
+#meetTabs .tab-pane {
+  margin-top: 15px;
+}

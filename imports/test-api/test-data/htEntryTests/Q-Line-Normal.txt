@@ -1,0 +1,1 @@
+Q;TSV;Team Silicon Valley;A;M;;400;52.39;M;1;2;D;This is an entry note;;;Hendricks;Richard;;M;;;10;;Bachman;Erlich;;M;;;11;;Dunn;Jared;;M;;;10;;Chugtai;Dinesh;;M;;;10;;Gilfoyle;Bertram;;M;;;10;;Bighetti;Big Head;;M;;;10;

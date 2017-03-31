@@ -1,0 +1,2 @@
+I;Lannister;Tyrion;I;M;;TLS;Team Lannister;36;11;Klis Fortress;Šibenik;Meereen;CA;12345;USA;AUS;(650) 555-1212;+1(408)555-1212;1-415-555-1212;Med;TYRLANI1010;101;tyrion@gameofthrones.com;
+I;Lannister;Tyrion;I;M;;TLS;Team Lannister;36;11;Klis Fortress;Šibenik;Meereen;CA;12345;USA;AUS;(650) 555-1212;+1(408)555-1212;1-415-555-1212;Med;TYRLANI1010;101;tyrion@gameofthrones.com;

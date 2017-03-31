@@ -1,0 +1,79 @@
+{
+  "name": "tmg-react",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Track &amp; Field Meet Management on the Web and from mobile device or any web browser",
+  "homepage": "http://sportsimplicty.com",
+  "author": "Sue Raisty, SportSimplicity, Inc.",
+  "license": " TODO SEE LICENSE IN LICENSE.txt",
+  "main": "main.js",
+  "bugs": "admin@sureproductconsulting.com",
+  "scripts": {
+    "start": "meteor run",
+    "lint": "eslint .",
+    "pretest": "npm run lint --silent"
+  },
+  "dependencies": {
+    "babel-runtime": "^6.20.0",
+    "csv-parse": "^1.1.7",
+    "meteor-node-stubs": "~0.2.4",
+    "react": "^15.4.2",
+    "react-addons-css-transition-group": "^15.4.2",
+    "react-bootstrap": "^0.30.8",
+    "react-dom": "^15.4.2",
+    "react-router": "^4.0.0",
+    "react-table": "^5.3.5",
+    "xml2json": "^0.10.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.2.1",
+    "eslint": "^3.18.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-import-resolver-meteor": "^0.3.4",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-meteor": "^4.0.1",
+    "eslint-plugin-react": "^6.10.3",
+    "faker": "^3.1.0"
+  },
+  "eslintConfig": {
+    "root": "true",
+    "parser": "babel-eslint",
+    "parserOptions": {
+      "allowImportExportEverywhere": true,
+      "ecmaVersion": 6,
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "env": {
+      "meteor": true,
+      "node": true,
+      "browser": true,
+      "mocha": true
+    },
+    "plugins": [
+      "meteor",
+      "react"
+    ],
+    "extends": [
+      "airbnb",
+      "eslint:recommended",
+      "plugin:meteor/recommended",
+      "plugin:react/recommended"
+    ],
+    "globals": {
+      "React": true
+    },
+    "settings": {
+      "import/resolver": "meteor"
+    },
+    "rules": {
+      "no-invalid-this": "warn",
+      "max-len": "warn",
+      "require-jsdoc": "warn",
+      "padded-blocks": "warn",
+      "no-console": "off"
+    }
+  }
+}

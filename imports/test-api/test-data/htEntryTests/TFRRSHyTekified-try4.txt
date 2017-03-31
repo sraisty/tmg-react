@@ -1,0 +1,539 @@
+D;Cunningham;Sazare;;m;;BELU;Bethany Lutheran;;1;100;;M;;15;;;001774SAZ*CUNN
+D;Palmquist;Rebecka;;f;;STBE;St. Benedict;;2;5000;19:12.9;M;;110;;;009561REB*PALM
+D;Johnson;Stephen;;m;;Carl;Carleton;;2;800;02:09.5;M;;18;;;009974STE*JOHN
+D;Vlakancic;Morgan;;f;;STCA;St. Catherine;;2;800;02:51.7;M;;35;;;010224MOR*VLAK
+D;Hiskes;Ben;;m;;Carl;Carleton;;2;800;02:05.5;M;;20;;;010302BEN*HISK
+D;Kiminski;Maria;;f;;STBE;St. Benedict;;1;200;29.43;M;;109;;;010618MAR*KIMI
+D;McNeil;Evan;;m;;Carl;Carleton;;3;pv;;M;;26;;;012060EVA*MCNE
+D;Escher;Paul;;m;;STOL;St. Olaf;;2;1500;03:58.5;M;;82;;;022689PAU*ESCH
+D;Simon;Reilly;;f;;Carl;Carleton;;2;100;14.37;M;;229;;;023193REI*SIMO
+D;Simon;Reilly;;f;;Carl;Carleton;;2;200;29.12;M;;229;;;023193REI*SIMO
+D;Bailly;Laura;;f;;STBE;St. Benedict;;2;1500;;M;;72;;;027312LAU*BAIL
+D;Bailly;Laura;;f;;STBE;St. Benedict;;2;3000steeple;13:29.2;M;;72;;;027312LAU*BAIL
+D;Sherrard;Tanya;;f;;BELU;Bethany Lutheran;;1;dt;21.55;M;;16;;;034982TAN*SHER
+D;Aardahl;Kristian;;m;;COMO;Concordia Moorhead;;1;5000;;M;;134;;;037178KRI*AARD
+D;Strickland;Shannon;;f;;STCA;St. Catherine;;1;1500;05:11.0;M;;22;;;037723SHA*STRI
+D;Marzinske;Danielle;;f;;BELU;Bethany Lutheran;;2;100h;18.43;M;;1;;;040051DAN*MARZ
+D;Marzinske;Danielle;;f;;BELU;Bethany Lutheran;;2;400h;;M;;1;;;040051DAN*MARZ
+D;Marzinske;Danielle;;f;;BELU;Bethany Lutheran;;2;tj;9.27;M;;1;;;040051DAN*MARZ
+D;Marzinske;Danielle;;f;;BELU;Bethany Lutheran;;2;hj;1.38;M;;1;;;040051DAN*MARZ
+D;Bouvagnet;Jenny;;f;;STOL;St. Olaf;;1;100;;M;;186;;;047751JEN*BOUV
+D;Bouvagnet;Jenny;;f;;STOL;St. Olaf;;1;pv;;M;;186;;;047751JEN*BOUV
+D;Stob;Nate;;m;;BELU;Bethany Lutheran;;1;110h;18.7;M;;11;;;048846NAT*STOB
+D;Stob;Nate;;m;;BELU;Bethany Lutheran;;1;400h;64.62;M;;11;;;048846NAT*STOB
+D;Stob;Nate;;m;;BELU;Bethany Lutheran;;1;hj;;M;;11;;;048846NAT*STOB
+D;Phearman;Alex;;m;;STOL;St. Olaf;;3;3000steeple;10:35.8;M;;101;;;051778ALE*PHEA
+D;Olsen;Britta;;f;;STOL;St. Olaf;;4;100;13.68;M;;203;;;052930BRI*OLSE
+D;Olsen;Britta;;f;;STOL;St. Olaf;;4;200;29.12;M;;203;;;052930BRI*OLSE
+D;Woods;Nick;;m;;STOL;St. Olaf;;1;sp;12.86;M;;70;;;053382NIC*WOOD
+D;Woods;Nick;;m;;STOL;St. Olaf;;1;dt;34.78;M;;70;;;053382NIC*WOOD
+D;Woods;Nick;;m;;STOL;St. Olaf;;1;ht;31.58;M;;70;;;053382NIC*WOOD
+D;Forness;Mikayla;;f;;COMO;Concordia Moorhead;;1;800;02:27.9;M;;174;;;053540MIK*FORN
+D;Forness;Mikayla;;f;;COMO;Concordia Moorhead;;1;lj;4.14;M;;174;;;053540MIK*FORN
+D;Forness;Mikayla;;f;;COMO;Concordia Moorhead;;1;sp;9;M;;174;;;053540MIK*FORN
+D;Forness;Mikayla;;f;;COMO;Concordia Moorhead;;1;jav;29.34;M;;174;;;053540MIK*FORN
+D;Forness;Mikayla;;f;;COMO;Concordia Moorhead;;1;hj;;M;;174;;;053540MIK*FORN
+D;Crumley;Emma;;f;;STOL;St. Olaf;;4;3000steeple;12:21.7;M;;50;;;060504EMM*CRUM
+D;Muegge;Jule;;f;;STCA;St. Catherine;;3;hj;1.38;M;;39;;;063394JUL*MUEG
+D;Seyferth;Colby;;m;;Carl;Carleton;;3;400h;57.14;M;;22;;;066411COL*SEYF
+D;Seyferth;Colby;;m;;Carl;Carleton;;3;sp;10.97;M;;22;;;066411COL*SEYF
+D;Seyferth;Colby;;m;;Carl;Carleton;;3;jav;38.55;M;;22;;;066411COL*SEYF
+D;Seyferth;Colby;;m;;Carl;Carleton;;3;pv;;M;;22;;;066411COL*SEYF
+D;Thornton;Jeanette;;f;;STBE;St. Benedict;;1;1500;05:54.9;M;;74;;;066661JEA*THOR
+D;Slaughter;Dan;;m;;STOL;St. Olaf;;1;jav;56.4;M;;71;;;066714DAN*SLAU
+D;Drewes;Bailey;;f;;STBE;St. Benedict;;3;5000;18:57.4;M;;112;;;068449BAI*DREW
+D;Peterson;Zoe;;f;;Carl;Carleton;;1;lj;4.81;M;;144;;;071494ZOE*PETE
+D;Peterson;Zoe;;f;;Carl;Carleton;;1;tj;10.01;M;;144;;;071494ZOE*PETE
+D;Harrison;Nathaniel;;m;;COMO;Concordia Moorhead;;1;800;02:15.9;M;;139;;;072162NAT*HARR
+D;Good;Alexis;;f;;STBE;St. Benedict;;2;hj;;M;;185;;;075759ALE*GOOD
+D;Murrey;Josh;;m;;COMO;Concordia Moorhead;;2;pv;4.03;M;;141;;;075814JOS*MURR
+D;Campbell;Caroline;;f;;Carl;Carleton;;2;1500;05:17.6;M;;133;;;076225CAR*CAMP
+D;Steinke;Ruth;;f;;Carl;Carleton;;2;1500;04:45.6;M;;135;;;079376RUT*STEI
+D;Steinke;Ruth;;f;;Carl;Carleton;;2;5000;;M;;135;;;079376RUT*STEI
+D;Campbell;Jake;;m;;STOL;St. Olaf;;2;1500;03:58.4;M;;91;;;086976JAK*CAMP
+D;Simon;Peter;;m;;COMO;Concordia Moorhead;;1;5000;;M;;145;;;088923PET*SIMO
+D;Hesse;Anton;;m;;STOL;St. Olaf;;3;200;24.31;M;;65;;;090996ANT*HESS
+D;Hesse;Anton;;m;;STOL;St. Olaf;;3;400h;59.94;M;;65;;;090996ANT*HESS
+D;Foley;Lucas;;m;;STOL;St. Olaf;;4;1500;04:23.9;M;;85;;;097416LUC*FOLE
+D;Robinson;Serina;;f;;STOL;St. Olaf;;3;5000;19:17.6;M;;70;;;105340SER*ROBI
+D;McKinsey;Kayla;;f;;Carl;Carleton;;2;100;15.21;M;;228;;;113249KAY*MCKI
+D;Baker;Andrea;;f;;COMO;Concordia Moorhead;;2;pv;2.47;M;;178;;;114005AND*BAKE
+D;Poss;Kristina;;f;;STCA;St. Catherine;;4;5000;19:04.7;M;;21;;;115169KRI*POSS
+D;Trachtenberg;Sarah;;f;;Carl;Carleton;;1;800;02:29.1;M;;132;;;116018SAR*TRAC
+D;Betting;Theo;;m;;COMO;Concordia Moorhead;;3;200;24.57;M;;132;;;118436THEABETT
+D;Betting;Theo;;m;;COMO;Concordia Moorhead;;3;hj;1.83;M;;132;;;118436THEABETT
+D;Clintsman;Valerie;;f;;STBE;St. Benedict;;2;100;;M;;85;;;118542VAL*CLIN
+D;Clintsman;Valerie;;f;;STBE;St. Benedict;;2;200;;M;;85;;;118542VAL*CLIN
+D;Edstrom;Walter;;m;;Carl;Carleton;;1;1500;04:07.9;M;;39;;;121305WAL*EDST
+D;Greeneway;Jake;;m;;STOL;St. Olaf;;3;800;02:01.2;M;;104;;;123757JAK*GREE
+D;Owens;Asia;;f;;BELU;Bethany Lutheran;;1;100;;M;;6;;;124558ASI*OWEN
+D;Owens;Asia;;f;;BELU;Bethany Lutheran;;1;400;;M;;6;;;124558ASI*OWEN
+D;Harder;Donny;;m;;STOL;St. Olaf;;4;400;52.15;M;;68;;;129335DON*HARD
+D;Sorgenfrie;Brittany;;f;;STBE;St. Benedict;;4;sp;10.6;M;;77;;;129632BRI*SORG
+D;Sorgenfrie;Brittany;;f;;STBE;St. Benedict;;4;dt;33.37;M;;77;;;129632BRI*SORG
+D;Sorgenfrie;Brittany;;f;;STBE;St. Benedict;;4;ht;38.42;M;;77;;;129632BRI*SORG
+D;Sorgenfrie;Brittany;;f;;STBE;St. Benedict;;4;jav;;M;;77;;;129632BRI*SORG
+D;Randklev;Mackenzie;;f;;COMO;Concordia Moorhead;;2;800;;M;;157;;;134085MAC*RAND
+D;Tut;Jb;;m;;STOL;St. Olaf;;4;800;02:01.2;M;;73;;;135019JB**TUTT
+D;Tut;Jb;;m;;STOL;St. Olaf;;4;hj;1.83;M;;73;;;135019JB**TUTT
+D;Marken;Jessica;;f;;COMO;Concordia Moorhead;;3;jav;25.37;M;;176;;;142653JES*MARK
+D;Marken;Jessica;;f;;COMO;Concordia Moorhead;;3;pv;2.77;M;;176;;;142653JES*MARK
+D;Stelton;London;;f;;STBE;St. Benedict;;1;pv;3.07;M;;94;;;149076LON*STEL
+D;Ames;Madison;;f;;STBE;St. Benedict;;1;ht;26.51;M;;102;;;149543MAD*AMES
+D;Ames;Madison;;f;;STBE;St. Benedict;;1;jav;15.45;M;;102;;;149543MAD*AMES
+D;Evenson;Alicia;;f;;STBE;St. Benedict;;2;jav;24.09;M;;81;;;150994ALI*EVEN
+D;Evenson;Alicia;;f;;STBE;St. Benedict;;2;hj;;M;;81;;;150994ALI*EVEN
+D;Stanton;Sara;;f;;COMO;Concordia Moorhead;;1;1500;;M;;213;;;154515SAR*STAN
+D;Hellman;Mike;;m;;Carl;Carleton;;1;jav;39.26;M;;24;;;158157MIK*HELL
+D;Polania-Gonzale;Ernesto;;m;;Carl;Carleton;;1;1500;04:29.2;M;;37;;;158219ERN*POLA
+D;Claypoole;Joy;;f;;STOL;St. Olaf;;1;1500;05:27.7;M;;199;;;161020JOY*CLAY
+D;Birchem;Hillary;;f;;COMO;Concordia Moorhead;;3;sp;11.11;M;;205;;;161655HIL*BIRC
+D;Birchem;Hillary;;f;;COMO;Concordia Moorhead;;3;dt;35.78;M;;205;;;161655HIL*BIRC
+D;Hickerson;Rochelle;;f;;COMO;Concordia Moorhead;;3;100;13.75;M;;209;;;171980ROC*HICK
+D;Comee;Laura;;f;;STBE;St. Benedict;;2;1500;05:20.2;M;;180;;;175694LAU*COME
+D;Davis;Dillon;;m;;STOL;St. Olaf;;4;3000steeple;10:02.4;M;;98;;;176372DIL*DAVI
+D;Johnson;Connor;;m;;COMO;Concordia Moorhead;;3;jav;49.2;M;;129;;;176524CON*JOHN
+D;Smith;Anja;;f;;COMO;Concordia Moorhead;;1;5000;20:30.6;M;;214;;;177266ANJ*SMIT
+D;Peterson;Tim;;m;;COMO;Concordia Moorhead;;3;400h;63.73;M;;120;;;177712TIMJPETE
+D;Peterson;Tim;;m;;COMO;Concordia Moorhead;;3;400h;;M;;120;;;177712TIMJPETE
+D;Peterson;Tim;;m;;COMO;Concordia Moorhead;;3;3000steeple;10:48.0;M;;120;;;177712TIMJPETE
+D;Hornor;Hart;;m;;Carl;Carleton;;2;5000;;M;;108;;;177906HAR*HORN
+D;Jensen;Jerlie;;f;;STOL;St. Olaf;;1;800;02:53.0;M;;60;;;183266JER*JENS
+D;Jensen;Jerlie;;f;;STOL;St. Olaf;;1;hj;1.33;M;;60;;;183266JER*JENS
+D;McElroy;Jenna;;f;;STCA;St. Catherine;;3;5000;18:57.7;M;;26;;;183687JEN*MCEL
+D;Marzinske;Diana;;f;;BELU;Bethany Lutheran;;1;100h;20.99;M;;9;;;183709DIA*MARZ
+D;Marzinske;Diana;;f;;BELU;Bethany Lutheran;;1;400h;79.22;M;;9;;;183709DIA*MARZ
+D;Barkley;Katie;;f;;COMO;Concordia Moorhead;;4;800;02:42.8;M;;158;;;184919KAT*BARK
+D;Howard;Evan;;m;;Carl;Carleton;;1;100;11.65;M;;46;;;186105EVA*HOWA
+D;Lane;Ian;;m;;COMO;Concordia Moorhead;;1;sp;9.99;M;;127;;;189082IAN*LANE
+D;Lane;Ian;;m;;COMO;Concordia Moorhead;;1;dt;31.68;M;;127;;;189082IAN*LANE
+D;Lane;Ian;;m;;COMO;Concordia Moorhead;;1;jav;33.25;M;;127;;;189082IAN*LANE
+D;Hulden;Jens;;m;;COMO;Concordia Moorhead;;2;sp;11.93;M;;125;;;193887JEN*HULD
+D;Hulden;Jens;;m;;COMO;Concordia Moorhead;;2;dt;36.51;M;;125;;;193887JEN*HULD
+D;Vickstrom;Ben;;m;;COMO;Concordia Moorhead;;3;200;23.02;M;;147;;;194240BENJVICK
+D;Tisdale;Rachel;;f;;COMO;Concordia Moorhead;;4;100;13.83;M;;154;;;194719RAC*TISD
+D;Tisdale;Rachel;;f;;COMO;Concordia Moorhead;;4;200;28.61;M;;154;;;194719RAC*TISD
+D;Tisdale;Rachel;;f;;COMO;Concordia Moorhead;;4;400;;M;;154;;;194719RAC*TISD
+D;Akinlabi;Arafat;;m;;Carl;Carleton;;3;200;25.2;M;;19;;;196279ARA*AKIN
+D;Akinlabi;Arafat;;m;;Carl;Carleton;;3;400;54.04;M;;19;;;196279ARA*AKIN
+D;Wendt;Katya;;f;;STOL;St. Olaf;;2;pv;;M;;195;;;207757KAT*WEND
+D;Exner;Meggie;;f;;STOL;St. Olaf;;4;5000;18:39.5h;M;;63;;;208578MEG*EXNE
+D;Helm;Kayti;;f;;STBE;St. Benedict;;4;100h;17.49;M;;91;;;209182KAYEHELM
+D;Helm;Kayti;;f;;STBE;St. Benedict;;4;400h;67.45;M;;91;;;209182KAYEHELM
+D;Helm;Kayti;;f;;STBE;St. Benedict;;4;hj;1.38;M;;91;;;209182KAYEHELM
+D;Reid;Elise;;f;;STBE;St. Benedict;;1;5000;19:25.6;M;;111;;;209474ELI*REID
+D;Campbell;Amelia;;f;;Carl;Carleton;;2;200;26.97;M;;147;;;220130AME*CAMP
+D;Campbell;Amelia;;f;;Carl;Carleton;;2;100h;15.45;M;;147;;;220130AME*CAMP
+D;Campbell;Amelia;;f;;Carl;Carleton;;2;jav;30.78;M;;147;;;220130AME*CAMP
+D;Campbell;Amelia;;f;;Carl;Carleton;;2;hj;;M;;147;;;220130AME*CAMP
+D;Skaalrud;Madelin;;f;;STCA;St. Catherine;;4;100;14.17;M;;40;;;224374MAD*SKAA
+D;Skaalrud;Madelin;;f;;STCA;St. Catherine;;4;200;29.6;M;;40;;;224374MAD*SKAA
+D;Lunning;Ethan;;m;;STOL;St. Olaf;;2;sp;12.63;M;;69;;;227454ETH*LUNN
+D;Lunning;Ethan;;m;;STOL;St. Olaf;;2;dt;41.86;M;;69;;;227454ETH*LUNN
+D;Lunning;Ethan;;m;;STOL;St. Olaf;;2;ht;42.13;M;;69;;;227454ETH*LUNN
+D;Larsen;Aidan;;m;;Carl;Carleton;;1;200;23.8;M;;28;;;231065AID*LARS
+D;Larsen;Aidan;;m;;Carl;Carleton;;1;400;52.92;M;;28;;;231065AID*LARS
+D;Hahn;Luke;;m;;BELU;Bethany Lutheran;;2;100;12.85;M;;3;;;238329LUK*HAHN
+D;Hahn;Luke;;m;;BELU;Bethany Lutheran;;2;400;;M;;3;;;238329LUK*HAHN
+D;Hahn;Luke;;m;;BELU;Bethany Lutheran;;2;ht;27.64;M;;3;;;238329LUK*HAHN
+D;Hahn;Luke;;m;;BELU;Bethany Lutheran;;2;jav;29.61;M;;3;;;238329LUK*HAHN
+D;Major;Andrea;;f;;COMO;Concordia Moorhead;;2;pv;;M;;179;;;239706AND*MAJO
+D;Karnick;Macaela;;f;;STBE;St. Benedict;;4;pv;2.77;M;;95;;;241942MACTKARN
+D;Hoerger;Jacob;;m;;Carl;Carleton;;4;5000;15:56.0;M;;107;;;242212JACSHOER
+D;Herringer;Nick;;m;;Carl;Carleton;;4;400;54.14;M;;45;;;243609NICHHERR
+D;Grafstrom;Sarah;;f;;COMO;Concordia Moorhead;;1;200;;M;;153;;;248101SAR*GRAF
+D;Schwartz;Ethan;;m;;BELU;Bethany Lutheran;;1;5000;17:00.0;M;;17;;;248862ETH*SCHW
+D;Willette;Kyle;;m;;COMO;Concordia Moorhead;;1;100;;M;;149;;;248886KYL*WILL
+D;Willette;Kyle;;m;;COMO;Concordia Moorhead;;1;200;;M;;149;;;248886KYL*WILL
+D;Marrier;Jamie;;m;;COMO;Concordia Moorhead;;3;110h;16.79;M;;115;;;251478JAMRMARR
+D;Marrier;Jamie;;m;;COMO;Concordia Moorhead;;3;400h;60.94;M;;115;;;251478JAMRMARR
+D;Weiss;Maggie;;f;;STOL;St. Olaf;;2;1500;05:00.4;M;;67;;;255441MAG*WEIS
+D;Richardson;Owen;;m;;BELU;Bethany Lutheran;;1;3000steeple;10:41.2;M;;14;;;277086OWE*RICH
+D;Ojika;Benjamin;;m;;MSM;Minn State Mankato;;1;hj;;M;;52;;;284703BEN*OJIK
+D;O'Donnell;Jenna;;f;;STBE;St. Benedict;;3;1500;04:52.8;M;;139;;;285604JENMODON
+D;Fouts;Abigail;;f;;COMO;Concordia Moorhead;;1;5000;21:25.1;M;;161;;;289560ABI*FOUT
+D;Fouts;Abigail;;f;;COMO;Concordia Moorhead;;1;3000steeple;;M;;161;;;289560ABI*FOUT
+D;Lampley;Renaldo;;m;;BELU;Bethany Lutheran;;2;100;12.59;M;;5;;;290507REN*LAMP
+D;Lampley;Renaldo;;m;;BELU;Bethany Lutheran;;2;tj;11.41;M;;5;;;290507REN*LAMP
+D;Thompson;Hilary;;f;;COMO;Concordia Moorhead;;4;lj;5.36;M;;164;;;290551HIL*THOM
+D;Thompson;Hilary;;f;;COMO;Concordia Moorhead;;4;tj;11.3;M;;164;;;290551HIL*THOM
+D;Coleman;Kendra;;f;;STBE;St. Benedict;;4;lj;4.44;M;;79;;;293955KENCCOLE
+D;Coleman;Kendra;;f;;STBE;St. Benedict;;4;tj;;M;;79;;;293955KENCCOLE
+D;Coleman;Kendra;;f;;STBE;St. Benedict;;4;ht;36.57;M;;79;;;293955KENCCOLE
+D;Coleman;Kendra;;f;;STBE;St. Benedict;;4;jav;38.34;M;;79;;;293955KENCCOLE
+D;Reeves;Cherae;;f;;COMO;Concordia Moorhead;;3;sp;14.03;M;;169;;;296092CHE*REEV
+D;Reeves;Cherae;;f;;COMO;Concordia Moorhead;;3;jav;31.78;M;;169;;;296092CHE*REEV
+D;VanErp;Samantha;;f;;STBE;St. Benedict;;2;lj;5.06;M;;92;;;296581SAM*VANE
+D;VanErp;Samantha;;f;;STBE;St. Benedict;;2;tj;10;M;;92;;;296581SAM*VANE
+D;Etteldorf;Andrew;;m;;Carl;Carleton;;1;800;02:15.3;M;;30;;;300552AND*ETTE
+D;Trujillo;Claire;;f;;Carl;Carleton;;1;5000;18:55.1;M;;124;;;302871CLA*TRUJ
+D;Mercil;Mandy;;f;;COMO;Concordia Moorhead;;1;sp;11.52;M;;171;;;304697MAN*MERC
+D;Mercil;Mandy;;f;;COMO;Concordia Moorhead;;1;jav;24.57;M;;171;;;304697MAN*MERC
+D;Mercil;Mandy;;f;;COMO;Concordia Moorhead;;1;pv;2.77;M;;171;;;304697MAN*MERC
+D;Wagener;Kyle;;m;;STOL;St. Olaf;;3;1500;04:18.5;M;;84;;;311465KYL*WAGE
+D;Novacinski;Moriah;;f;;STOL;St. Olaf;;4;400;62.78;M;;52;;;317895MOR*NOVA
+D;Novacinski;Moriah;;f;;STOL;St. Olaf;;4;1500;04:50.5;M;;52;;;317895MOR*NOVA
+D;Carlsen;Nick;;m;;Carl;Carleton;;1;1500;04:34.5;M;;36;;;323204NIC*CARL
+D;Kosobud;Allison;;f;;STBE;St. Benedict;;1;800;02:16.7;M;;108;;;333496ALL*KOSO
+D;Bakken;Daniel;;m;;STOL;St. Olaf;;4;3000steeple;10:44.3;M;;100;;;336882DAN*BAKK
+D;Duppong;Danelle;;f;;STBE;St. Benedict;;4;sp;11.26;M;;93;;;338316DANMDUPP
+D;Duppong;Danelle;;f;;STBE;St. Benedict;;4;dt;29.12;M;;93;;;338316DANMDUPP
+D;Bjork;Sean;;m;;STOL;St. Olaf;;1;1500;04:14.7;M;;86;;;347018SEA*BJOR
+D;Schepp;Jackson;;m;;COMO;Concordia Moorhead;;1;lj;6.14;M;;122;;;348281JAC*SCHE
+D;Schepp;Jackson;;m;;COMO;Concordia Moorhead;;1;tj;;M;;122;;;348281JAC*SCHE
+D;Schepp;Jackson;;m;;COMO;Concordia Moorhead;;1;hj;1.93;M;;122;;;348281JAC*SCHE
+D;Drache;Susan;;f;;COMO;Concordia Moorhead;;2;5000;20:19.7;M;;207;;;349835SUS*DRAC
+D;Ross;Kevin;;m;;STOL;St. Olaf;;2;dt;34.62;M;;103;;;355993KEV*ROSS
+D;Ross;Kevin;;m;;STOL;St. Olaf;;2;ht;39.04;M;;103;;;355993KEV*ROSS
+D;Holmes;Megan;;f;;STOL;St. Olaf;;3;400;64.67;M;;53;;;358566MEG*HOLM
+D;Holmes;Megan;;f;;STOL;St. Olaf;;3;1500;04:55.5;M;;53;;;358566MEG*HOLM
+D;Moore;Brittany;;f;;STCA;St. Catherine;;2;100;;M;;42;;;362592BRI*MOOR
+D;Moore;Brittany;;f;;STCA;St. Catherine;;2;200;28.27;M;;42;;;362592BRI*MOOR
+D;Moore;Brittany;;f;;STCA;St. Catherine;;2;100h;18.24;M;;42;;;362592BRI*MOOR
+D;Philippi;Morghen;;f;;STOL;St. Olaf;;2;3000steeple;12:39.0;M;;48;;;363083MOR*PHIL
+D;Danielsson;Gustav;;m;;Carl;Carleton;;3;800;;M;;31;;;365144GUS*DANI
+D;Reyelts;Tara;;f;;STOL;St. Olaf;;4;100;14.06;M;;204;;;365848TAR*REYE
+D;Reyelts;Tara;;f;;STOL;St. Olaf;;4;200;28.69;M;;204;;;365848TAR*REYE
+D;Johnson;Emma;;f;;STBE;St. Benedict;;1;3000steeple;13:03.6;M;;134;;;367884EMM*JOHN
+D;Grisanzio;Emma;;f;;Carl;Carleton;;1;100;;M;;145;;;369815EMM*GRIS
+D;Grisanzio;Emma;;f;;Carl;Carleton;;1;200;27.92;M;;145;;;369815EMM*GRIS
+D;Grisanzio;Emma;;f;;Carl;Carleton;;1;hj;1.48;M;;145;;;369815EMM*GRIS
+D;Coulter;Kelsey;;f;;STOL;St. Olaf;;3;5000;20:00.8;M;;69;;;370688KEL*COUL
+D;Kiminski;Amy;;f;;STBE;St. Benedict;;4;lj;4.95;M;;182;;;379036AMYKKIMI
+D;Howe;Sarah;;f;;STCA;St. Catherine;;4;400h;74.24;M;;19;;;384408SAR*HOWE
+D;Holten;Anna;;f;;STOL;St. Olaf;;1;800;02:41.5;M;;61;;;390687ANN*HOLT
+D;Skluzacek;Makayla;;f;;STCA;St. Catherine;;3;200;30.34;M;;37;;;392566MAK*SKLU
+D;Skluzacek;Makayla;;f;;STCA;St. Catherine;;3;100h;19.18;M;;37;;;392566MAK*SKLU
+D;Skluzacek;Makayla;;f;;STCA;St. Catherine;;3;lj;4.43;M;;37;;;392566MAK*SKLU
+D;Mermel;Kazia;;f;;Carl;Carleton;;1;1500;05:02.9;M;;122;;;396149KAZ*MERM
+D;Brianna;Bedard;;f;;MSM;Minn State Mankato;;1;pv;;M;;47;;;398027BRI*BEDA
+D;Wood;Adam;;m;;STOL;St. Olaf;;2;5000;16:19.6;M;;96;;;398924ADA*WOOD
+D;Stenslie;Solvei;;f;;COMO;Concordia Moorhead;;1;pv;2.47;M;;212;;;406818SOL*STEN
+D;Foley;Clare;;f;;STBE;St. Benedict;;4;100;13.18;M;;78;;;407242CLAEFOLE
+D;Foley;Clare;;f;;STBE;St. Benedict;;4;200;;M;;78;;;407242CLAEFOLE
+D;Foley;Clare;;f;;STBE;St. Benedict;;4;ht;37.86;M;;78;;;407242CLAEFOLE
+D;Corbett;Will;;m;;COMO;Concordia Moorhead;;1;800;;M;;137;;;407702WIL*CORB
+D;Grove;Abby;;f;;COMO;Concordia Moorhead;;1;jav;31.09;M;;175;;;409087ABB*GROV
+D;Peterson;Emma;;f;;COMO;Concordia Moorhead;;1;100h;17.3;M;;162;;;413505EMM*PETE
+D;Peterson;Emma;;f;;COMO;Concordia Moorhead;;1;400h;68.63;M;;162;;;413505EMM*PETE
+D;Peterson;Emma;;f;;COMO;Concordia Moorhead;;1;lj;4.95;M;;162;;;413505EMM*PETE
+D;Peterson;Emma;;f;;COMO;Concordia Moorhead;;1;hj;1.53;M;;162;;;413505EMM*PETE
+D;Ziolkowski;Brianna;;f;;MSM;Minn State Mankato;;1;hj;;M;;101;;;417866BRI*ZIOL
+D;Powell;Slater;;m;;MSM;Minn State Mankato;;3;400h;;M;;61;;;418009SLA*POWE
+D;Fiebelkorn;Jeff;;m;;COMO;Concordia Moorhead;;3;400h;60.48;M;;119;;;419674JEFMFIEB
+D;Webster;Nate;;m;;STOL;St. Olaf;;1;800;02:06.5;M;;78;;;420686NAT*WEBS
+D;Meer;Zac;;m;;STOL;St. Olaf;;2;1500;04:30.1;M;;92;;;426252ZAC*MEER
+D;Percival;Jack;;m;;Carl;Carleton;;2;200;24.47;M;;21;;;427901JAC*PERC
+D;Percival;Jack;;m;;Carl;Carleton;;2;400;52.38;M;;21;;;427901JAC*PERC
+D;Hagen;Nikolaj;;m;;COMO;Concordia Moorhead;;3;110h;;M;;117;;;434435NIKOHAGE
+D;Adams;Suzi;;f;;STBE;St. Benedict;;2;100;13.6;M;;86;;;434704SUZ*ADAM
+D;Adams;Suzi;;f;;STBE;St. Benedict;;2;200;27.9;M;;86;;;434704SUZ*ADAM
+D;Mueller;Eric;;m;;STOL;St. Olaf;;3;3000steeple;10:24.1;M;;97;;;435124ERI*MUEL
+D;Christian;John;;m;;STOL;St. Olaf;;4;1500;04:18.8;M;;93;;;436080JOH*CHRI
+D;Bruss;Nick;;m;;BELU;Bethany Lutheran;;1;110h;16.65;M;;12;;;436724NIC*BRUS
+D;Bruss;Nick;;m;;BELU;Bethany Lutheran;;1;400h;;M;;12;;;436724NIC*BRUS
+D;Bruss;Nick;;m;;BELU;Bethany Lutheran;;1;tj;12.28;M;;12;;;436724NIC*BRUS
+D;Block;Marit;;f;;STOL;St. Olaf;;4;1500;05:50.9;M;;71;;;437827MAR*BLOC
+D;Chudy;Ali;;f;;COMO;Concordia Moorhead;;2;sp;7.79;M;;173;;;438548ALL*CHUD
+D;Chudy;Ali;;f;;COMO;Concordia Moorhead;;2;ht;18.4;M;;173;;;438548ALL*CHUD
+D;Chudy;Ali;;f;;COMO;Concordia Moorhead;;2;jav;12.7;M;;173;;;438548ALL*CHUD
+D;Batalden;Sabrina;;f;;BELU;Bethany Lutheran;;1;100;;M;;12;;;443890SAB*BATA
+D;Batalden;Sabrina;;f;;BELU;Bethany Lutheran;;1;400;;M;;12;;;443890SAB*BATA
+D;Nelson;Alex;;m;;STOL;St. Olaf;;3;100;12.48;M;;63;;;444379ALE*NELS
+D;Nelson;Alex;;m;;STOL;St. Olaf;;3;200;24.98;M;;63;;;444379ALE*NELS
+D;McCord;Siri;;f;;STOL;St. Olaf;;3;1500;05:30.0;M;;57;;;446377SIR*MCCO
+D;Stageberg;Liz;;f;;COMO;Concordia Moorhead;;1;800;02:50.3;M;;215;;;446786LIZ*STAG
+D;Pederson;Tyler;;m;;COMO;Concordia Moorhead;;1;5000;17:22.9;M;;142;;;446913TYL*PEDE
+D;Flack;Caleb;;m;;Carl;Carleton;;2;800;;M;;29;;;447285CAL*FLAC
+D;Memmeshiemer;Dana;;f;;BELU;Bethany Lutheran;;1;dt;17;M;;15;;;450615DAN*MEMM
+D;Thompson;Ashley;;f;;COMO;Concordia Moorhead;;2;sp;9.85;M;;172;;;450936ASH*THOM
+D;Thompson;Ashley;;f;;COMO;Concordia Moorhead;;2;dt;32.31;M;;172;;;450936ASH*THOM
+D;Thompson;Ashley;;f;;COMO;Concordia Moorhead;;2;ht;25.7;M;;172;;;450936ASH*THOM
+D;Thompson;Ashley;;f;;COMO;Concordia Moorhead;;2;jav;16.08;M;;172;;;450936ASH*THOM
+D;Baird;Charlie;;m;;STOL;St. Olaf;;2;1500;04:23.5;M;;81;;;454581CHA*BAIR
+D;Illies;Becca;;f;;COMO;Concordia Moorhead;;1;100h;;M;;151;;;460802BEC*ILLI
+D;Kunz;Alex;;m;;STOL;St. Olaf;;1;800;02:14.2;M;;80;;;462293ALE*KUNZ
+D;Phillips Longley;Emily;;f;;Carl;Carleton;;2;1500;05:47.7;M;;127;;;468919EMI*LONG
+D;Eggers;Jacob;;m;;STOL;St. Olaf;;1;1500;04:17.0;M;;90;;;469340JAC*EGGE
+D;Bransford;Sarah;;f;;STOL;St. Olaf;;3;200;30.97;M;;193;;;470213SAR*BRAN
+D;Spittle;Ethan;;m;;COMO;Concordia Moorhead;;1;800;02:06.1;M;;146;;;470513ETH*SPIT
+D;Manley;Phil;;m;;COMO;Concordia Moorhead;;1;800;02:08.6;M;;140;;;472748PHI*MANL
+D;Hoops;Suzie;;f;;STOL;St. Olaf;;1;400;67.05;M;;59;;;474759SUZ*HOOP
+D;Hoops;Suzie;;f;;STOL;St. Olaf;;1;800;02:33.9;M;;59;;;474759SUZ*HOOP
+D;Knickerbocker;Cal;;m;;STOL;St. Olaf;;2;800;02:03.4;M;;75;;;475466CAL*KNIC
+D;Clifton;Eddie;;m;;COMO;Concordia Moorhead;;1;pv;4.03;M;;136;;;476596EDD*CLIF
+D;Richmond;Morgan;;f;;Carl;Carleton;;2;1500;05:21.9;M;;142;;;480303MOR*RICH
+D;Fordahl;Hannah;;f;;COMO;Concordia Moorhead;;2;lj;4.45;M;;166;;;484486HAN*FORD
+D;Fordahl;Hannah;;f;;COMO;Concordia Moorhead;;2;sp;10.53;M;;166;;;484486HAN*FORD
+D;Fordahl;Hannah;;f;;COMO;Concordia Moorhead;;2;jav;24.01;M;;166;;;484486HAN*FORD
+D;Lardy;Mariah;;f;;COMO;Concordia Moorhead;;3;1500;05:42.0;M;;159;;;488824MAR*LARD
+D;Schultz;Adam;;m;;;;;0;sp;11.5;M;;290;;;492341ADA*SCHU
+D;Schultz;Adam;;m;;;;;0;dt;38.62;M;;290;;;492341ADA*SCHU
+D;Susienka;Keeley;;f;;STOL;St. Olaf;;4;1500;05:45.9;M;;56;;;498622KEE*SUSI
+D;Celichowski;Colette;;f;;Carl;Carleton;;3;800;02:19.3;M;;120;;;500118COL*CELI
+D;Lee;Saehee;;f;;Carl;Carleton;;1;800;02:48.0;M;;130;;;500188SAE*LEE*
+D;Nunez Frausto;Adan;;m;;Carl;Carleton;;3;ht;47.76;M;;41;;;504327ADA*NUNE
+D;Johnson;Kayle;;f;;COMO;Concordia Moorhead;;1;lj;4.38;M;;167;;;505355KAY*JOHN
+D;Johnson;Kayle;;f;;COMO;Concordia Moorhead;;1;jav;19.35;M;;167;;;505355KAY*JOHN
+D;Breault;Danielle;;f;;STCA;St. Catherine;;2;sp;8.61;M;;27;;;513087DAN*BREA
+D;Breault;Danielle;;f;;STCA;St. Catherine;;2;dt;21.27;M;;27;;;513087DAN*BREA
+D;Breault;Danielle;;f;;STCA;St. Catherine;;2;jav;20.91;M;;27;;;513087DAN*BREA
+D;Haase;Joe;;m;;Carl;Carleton;;2;800;;M;;155;;;517929JOE*HAAS
+D;Haase;Joe;;m;;Carl;Carleton;;2;1500;;M;;155;;;517929JOE*HAAS
+D;Heywood;Oliver;;m;;Carl;Carleton;;3;800;02:06.6;M;;32;;;521510OLI*HEYW
+D;Johnson;Courtney;;f;;MSM;Minn State Mankato;;3;hj;1.53;M;;99;;;527643COU*JOHN
+D;Donovan;Sally;;f;;Carl;Carleton;;2;1500;04:59.4;M;;123;;;530905SAL*DONO
+D;Tolan;Michael;;m;;Carl;Carleton;;4;800;02:05.8;M;;33;;;536143MICPTOLA
+D;Sauer;Megan;;f;;BELU;Bethany Lutheran;;1;1500;05:17.0;M;;14;;;537396ALI*SAUE
+D;Sauer;Alissa;;f;;BELU;Bethany Lutheran;;2;3000steeple;14:31.9;M;;4;;;537396ALI*SAUE
+D;Fowl;Brendan;;m;;Carl;Carleton;;3;sp;12.2;M;;40;;;538720BRE*FOWL
+D;Fowl;Brendan;;m;;Carl;Carleton;;3;jav;38.33;M;;40;;;538720BRE*FOWL
+D;Rygg;Paige;;f;;COMO;Concordia Moorhead;;4;400;;M;;222;;;539683PAI*RYGG
+D;Rygg;Paige;;f;;COMO;Concordia Moorhead;;4;800;;M;;222;;;539683PAI*RYGG
+D;Rygg;Paige;;f;;COMO;Concordia Moorhead;;4;1500;05:03.0;M;;222;;;539683PAI*RYGG
+D;Fricke;Audrey;;f;;STBE;St. Benedict;;3;400;64.27;M;;106;;;542000AUDGFRIC
+D;Fricke;Audrey;;f;;STBE;St. Benedict;;3;lj;4.92;M;;106;;;542000AUDGFRIC
+D;Rod;Colton;;m;;STOL;St. Olaf;;3;5000;16:21.3;M;;95;;;544374COL*ROD*
+D;Magnussen;Amber;;f;;STOL;St. Olaf;;1;sp;10;M;;190;;;546152AMB*MAGN
+D;Magnussen;Amber;;f;;STOL;St. Olaf;;1;dt;28.19;M;;190;;;546152AMB*MAGN
+D;Hanson;Greta;;f;;STOL;St. Olaf;;4;400;69.1;M;;54;;;552427GRE*HANS
+D;Hanson;Greta;;f;;STOL;St. Olaf;;4;1500;05:19.7;M;;54;;;552427GRE*HANS
+D;Bruender;Josh;;m;;BELU;Bethany Lutheran;;1;400h;;M;;10;;;554021JOS*BRUE
+D;Bruender;Josh;;m;;BELU;Bethany Lutheran;;1;lj;5.68;M;;10;;;554021JOS*BRUE
+D;Bruender;Josh;;m;;BELU;Bethany Lutheran;;1;pv;3.43;M;;10;;;554021JOS*BRUE
+D;Stewart;Lindsey;;f;;BELU;Bethany Lutheran;;1;sp;8.25;M;;17;;;557779LIN*STEW
+D;Stewart;Lindsey;;f;;BELU;Bethany Lutheran;;1;dt;19.81;M;;17;;;557779LIN*STEW
+D;Stewart;Lindsey;;f;;BELU;Bethany Lutheran;;1;ht;22.37;M;;17;;;557779LIN*STEW
+D;Gammon-Deering;Manon;;f;;STBE;St. Benedict;;3;800;;M;;107;;;557817MANAGAMM
+D;Gammon-Deering;Manon;;f;;STBE;St. Benedict;;3;1500;04:48.7;M;;107;;;557817MANAGAMM
+D;Schneck;Daniel;;m;;COMO;Concordia Moorhead;;3;5000;18:51.5;M;;143;;;562022DAN*SCHN
+D;Anderson;Tara;;f;;COMO;Concordia Moorhead;;2;200;;M;;155;;;566229TAR*ANDE
+D;Anderson;Tara;;f;;COMO;Concordia Moorhead;;2;100h;;M;;155;;;566229TAR*ANDE
+D;Walsh;Greta;;f;;COMO;Concordia Moorhead;;1;tj;10.01;M;;168;;;571509GRE*WALS
+D;Walsh;Greta;;f;;COMO;Concordia Moorhead;;1;pv;2.47;M;;168;;;571509GRE*WALS
+D;Wagner;Anna;;f;;STBE;St. Benedict;;2;jav;;M;;82;;;575468ANN*WAGN
+D;Wagner;Anna;;f;;STBE;St. Benedict;;2;hj;;M;;82;;;575468ANN*WAGN
+D;Barker;Josh;;m;;BELU;Bethany Lutheran;;1;200;26.45;M;;9;;;577872JOS*BARK
+D;Barker;Josh;;m;;BELU;Bethany Lutheran;;1;110h;20.81;M;;9;;;577872JOS*BARK
+D;Barker;Josh;;m;;BELU;Bethany Lutheran;;1;400h;;M;;9;;;577872JOS*BARK
+D;Cheng;Jiatao;;m;;Carl;Carleton;;3;sp;10.63;M;;50;;;578027JIA*CHEN
+D;Cheng;Jiatao;;m;;Carl;Carleton;;3;ht;38.99;M;;50;;;578027JIA*CHEN
+D;Kushner;Taisa;;f;;STOL;St. Olaf;;4;3000steeple;13:50.1;M;;51;;;578616TAI*KUSH
+D;Berg;Paul;;m;;STOL;St. Olaf;;4;3000steeple;;M;;99;;;581109PAU*BERG
+D;Nistler;Josie;;f;;STBE;St. Benedict;;1;lj;4.04;M;;76;;;581255JOS*NIST
+D;Nistler;Josie;;f;;STBE;St. Benedict;;1;tj;8.94;M;;76;;;581255JOS*NIST
+D;Nistler;Josie;;f;;STBE;St. Benedict;;1;jav;18.25;M;;76;;;581255JOS*NIST
+D;Oats;Denzell;;m;;MSM;Minn State Mankato;;1;hj;1.93;M;;53;;;581362DEN*OATS
+D;Benzegala;Alex;;m;;COMO;Concordia Moorhead;;4;200;23.42;M;;114;;;585769ALE*BENZ
+D;Benzegala;Alex;;m;;COMO;Concordia Moorhead;;4;400;50.37;M;;114;;;585769ALE*BENZ
+D;Wells-Johnson;Shakeela;;f;;STCA;St. Catherine;;1;200;28.53;M;;41;;;586273SHA*WELL
+D;Wells-Johnson;Shakeela;;f;;STCA;St. Catherine;;1;400;62.87;M;;41;;;586273SHA*WELL
+D;Mullen;Kelsey;;f;;STOL;St. Olaf;;4;3000steeple;12:33.1;M;;49;;;587305KEL*MULL
+D;Vinella-Brusher;Emma;;f;;Carl;Carleton;;2;800;02:38.5;M;;129;;;588279EMM*VINE
+D;Schoenbauer;Lauren;;f;;STBE;St. Benedict;;2;1500;05:36.9;M;;105;;;594051LAU*SCHO
+D;Manning;Sarah;;f;;STCA;St. Catherine;;3;hj;1.53;M;;38;;;595907SAR*MONG
+D;Coughlin;Ezra;;m;;STOL;St. Olaf;;3;200;24.68;M;;66;;;597961EZR*COUG
+D;Coughlin;Ezra;;m;;STOL;St. Olaf;;3;400;55.88;M;;66;;;597961EZR*COUG
+D;Rud;Shaina;;f;;STOL;St. Olaf;;4;400;60.47;M;;62;;;598327SHA*RUD*
+D;Rud;Shaina;;f;;STOL;St. Olaf;;4;800;02:28.5;M;;62;;;598327SHA*RUD*
+D;Johnson;Dayna;;f;;STBE;St. Benedict;;3;1500;05:44.9;M;;73;;;599465DAYNJOHN
+D;Meyer;Phillip;;m;;STOL;St. Olaf;;3;1500;04:09.0;M;;88;;;601738PHI*MEYE
+D;Erickson;Timothy;;m;;STOL;St. Olaf;;4;800;02:02.4;M;;79;;;605339TIM*ERIC
+D;Dunphy;Aaron;;m;;STOL;St. Olaf;;3;200;;M;;67;;;605997AAR*DUNP
+D;Dunphy;Aaron;;m;;STOL;St. Olaf;;3;110h;16.57;M;;67;;;605997AAR*DUNP
+D;Womeldorf;Sam;;f;;STBE;St. Benedict;;2;3000steeple;11:54.0;M;;83;;;610676SAM*WOME
+D;Dovre;Noah;;m;;COMO;Concordia Moorhead;;2;110h;17.04;M;;116;;;626030NOA*DOVR
+D;Dovre;Noah;;m;;COMO;Concordia Moorhead;;2;400h;62.35;M;;116;;;626030NOA*DOVR
+D;Porter;Kathy;;f;;STOL;St. Olaf;;4;ht;38.91;M;;188;;;626323KAT*PORT
+D;Neuger;Adam;;m;;STOL;St. Olaf;;1;hj;1.68;M;;72;;;628953ADA*NEUG
+D;Bolden;Michaela;;f;;STOL;St. Olaf;;2;ht;31.53;M;;189;;;631929MIC*BOLD
+D;Laack-Veeder;Noah;;m;;Carl;Carleton;;3;1500;04:15.4;M;;110;;;633033NOA*LAAC
+D;Mielke;Kristen;;f;;BELU;Bethany Lutheran;;1;200;32.38;M;;8;;;633574KRI*MIEL
+D;Mielke;Kristen;;f;;BELU;Bethany Lutheran;;1;lj;4.05;M;;8;;;633574KRI*MIEL
+D;Paige;Clements;;f;;MSM;Minn State Mankato;;1;pv;3.22;M;;44;;;639807PAI*CLEM
+D;Lauermann;Taylor;;m;;COMO;Concordia Moorhead;;2;400h;65.22;M;;121;;;642327TAY*LAUE
+D;Weber;Emma;;f;;STBE;St. Benedict;;1;800;02:31.8;M;;88;;;643119EMM*WEBE
+D;Weber;Emma;;f;;STBE;St. Benedict;;1;1500;05:05.5;M;;88;;;643119EMM*WEBE
+D;Hoornaert;Jamie;;f;;STOL;St. Olaf;;1;5000;18:42.8;M;;64;;;645595JAM*HOOR
+D;Ackley;Ashleigh;;f;;STCA;St. Catherine;;2;100;;M;;43;;;647663ASH*ACKL
+D;Ackley;Ashleigh;;f;;STCA;St. Catherine;;2;200;;M;;43;;;647663ASH*ACKL
+D;Lemke;Stefan;;m;;STOL;St. Olaf;;4;1500;04:06.8;M;;89;;;648402STE*LEMK
+D;Priebe;Jorden;;f;;STCA;St. Catherine;;4;ht;42.61;M;;29;;;653586JOR*PRIE
+D;Scherber;Collin;;m;;COMO;Concordia Moorhead;;1;100;12.36;M;;112;;;659830COL*SCHE
+D;Scherber;Collin;;m;;COMO;Concordia Moorhead;;1;200;24.72;M;;112;;;659830COL*SCHE
+D;Palmer;Abby;;f;;STCA;St. Catherine;;1;tj;10.48;M;;34;;;663964ABB*PALM
+D;Palmer;Abby;;f;;STCA;St. Catherine;;1;jav;30.92;M;;34;;;663964ABB*PALM
+D;Larson;Kelsie;;f;;STBE;St. Benedict;;4;1500;05:07.8;M;;87;;;664052KEL*LARS
+D;Sturtz;Adam;;m;;STOL;St. Olaf;;4;800;02:04.7;M;;76;;;668585ADA*STUR
+D;Barry;Jonah;;m;;Carl;Carleton;;2;1500;04:00.4;M;;106;;;669285JON*BARR
+D;Barry;Jonah;;m;;Carl;Carleton;;2;5000;;M;;106;;;669285JON*BARR
+D;Arndorfer;Stella;;f;;STOL;St. Olaf;;2;5000;21:36.5;M;;65;;;669363STE*ARND
+D;DeLeon;Tony;;m;;COMO;Concordia Moorhead;;2;100;12.78;M;;113;;;676279TON*DELE
+D;DeLeon;Tony;;m;;COMO;Concordia Moorhead;;2;200;25.97;M;;113;;;676279TON*DELE
+D;Larson;Ailee;;f;;STCA;St. Catherine;;3;5000;;M;;25;;;676304AIL*LARS
+D;Witschen;Mandy;;f;;STBE;St. Benedict;;4;400;60.65;M;;84;;;678033MAN*WITS
+D;Witschen;Mandy;;f;;STBE;St. Benedict;;4;hj;1.43;M;;84;;;678033MAN*WITS
+D;Wold;Carl;;m;;BELU;Bethany Lutheran;;2;3000steeple;11:24.3;M;;8;;;678556CAR*WOLD
+D;Hendrickson;Mattia;;f;;STBE;St. Benedict;;1;1500;05:13.1;M;;115;;;679022MAT*HEND
+D;Nakasaka;Laura;;f;;Carl;Carleton;;1;1500;05:14.5;M;;227;;;685876LAU*NAKA
+D;Preusser;Kaitlin;;f;;COMO;Concordia Moorhead;;1;800;02:36.2;M;;156;;;688339KAI*PREU
+D;Goss;Mark;;m;;COMO;Concordia Moorhead;;3;hj;;M;;131;;;691907MAR*GOSS
+D;Waananen;Amy;;f;;STOL;St. Olaf;;3;1500;05:01.5;M;;66;;;695589AMY*WAAN
+D;Imholte;Sam;;f;;STBE;St. Benedict;;4;sp;12.45;M;;80;;;697245SAMRIMHO
+D;Imholte;Sam;;f;;STBE;St. Benedict;;4;dt;39.75;M;;80;;;697245SAMRIMHO
+D;Imholte;Sam;;f;;STBE;St. Benedict;;4;ht;44.97;M;;80;;;697245SAMRIMHO
+D;Domingues;Allison;;f;;Carl;Carleton;;1;1500;05:34.6;M;;126;;;697640ALL*DOMI
+D;Salazar;Hailey;;f;;STOL;St. Olaf;;2;pv;2.47;M;;225;;;699170HAI*SALA
+D;Janes;Aurora;;f;;Carl;Carleton;;3;5000;19:21.3;M;;119;;;699601AUR*JANE
+D;Rosenfeldt;Katie;;f;;COMO;Concordia Moorhead;;2;400h;72.31;M;;163;;;703031KAT*ROSE
+D;Weiss;Paige;;f;;STOL;St. Olaf;;1;800;03:16.5;M;;201;;;703169PAI*WEIS
+D;Tuuri;Lisa;;f;;STOL;St. Olaf;;4;100;14.8;M;;198;;;70591LIS*TUUR
+D;Tuuri;Lisa;;f;;STOL;St. Olaf;;4;200;29.97;M;;198;;;70591LIS*TUUR
+D;Knickerbocker;Hannah;;f;;COMO;Concordia Moorhead;;4;1500;;M;;160;;;706544HAN*KNIC
+D;Knickerbocker;Hannah;;f;;COMO;Concordia Moorhead;;4;5000;19:23.0;M;;160;;;706544HAN*KNIC
+D;Hagley;Mike;;m;;COMO;Concordia Moorhead;;4;pv;;M;;133;;;711546MIK*HAGL
+D;Croy;Colleen;;f;;BELU;Bethany Lutheran;;1;100;14.6;M;;13;;;713558COL*CROY
+D;Croy;Colleen;;f;;BELU;Bethany Lutheran;;1;200;30.49;M;;13;;;713558COL*CROY
+D;Goodman;Caitlin;;f;;STBE;St. Benedict;;4;1500;05:08.5;M;;181;;;717614CAI*GOOD
+D;Richards;Katie;;f;;Carl;Carleton;;3;pv;2.92;M;;184;;;718664KAT*RICH
+D;Roth;Erin;;f;;Carl;Carleton;;2;1500;05:37.5;M;;128;;;719450ERI*ROTH
+D;Szyszka;Nicole;;f;;STCA;St. Catherine;;1;dt;27.5;M;;28;;;720642NIC*SZYS
+D;Szyszka;Nicole;;f;;STCA;St. Catherine;;1;ht;29.39;M;;28;;;720642NIC*SZYS
+D;Paulson;Amy;;f;;COMO;Concordia Moorhead;;1;100;16.44;M;;152;;;721139AMY*PAUL
+D;Paulson;Amy;;f;;COMO;Concordia Moorhead;;1;200;;M;;152;;;721139AMY*PAUL
+D;Murray;Piper;;f;;STBE;St. Benedict;;2;pv;2.77;M;;96;;;725433PIP*MURR
+D;Pohlmann;Megan;;f;;STCA;St. Catherine;;1;ht;26.94;M;;33;;;731496MEG*POHL
+D;Pohlmann;Megan;;f;;STCA;St. Catherine;;1;jav;27.33;M;;33;;;731496MEG*POHL
+D;Decker;Jerika;;f;;STCA;St. Catherine;;1;ht;24.44;M;;32;;;732276JER*DECK
+D;Decker;Jerika;;f;;STCA;St. Catherine;;1;jav;21.73;M;;32;;;732276JER*DECK
+D;McCoy;Kaci;;f;;STBE;St. Benedict;;2;5000;20:32.2;M;;114;;;733386KAC*MCCO
+D;Nipper;Nicole;;f;;Carl;Carleton;;1;1500;05:09.3;M;;125;;;735981NIC*NIPP
+D;Begin;Laura;;f;;STOL;St. Olaf;;4;dt;29.35;M;;187;;;746505LAU*BEGI
+D;Begin;Laura;;f;;STOL;St. Olaf;;4;ht;38.23;M;;187;;;746505LAU*BEGI
+D;Howe;Michelle;;f;;STBE;St. Benedict;;3;100h;;M;;90;;;750212MICCHOWE
+D;Howe;Michelle;;f;;STBE;St. Benedict;;3;400h;;M;;90;;;750212MICCHOWE
+D;McHugh;Erin;;f;;STOL;St. Olaf;;2;400;66.86;M;;196;;;751285ERI*MCHU
+D;Drake;Victor;;m;;BELU;Bethany Lutheran;;1;100;13.42;M;;1;;;751511VIC*DRAK
+D;Grady;Keding;;f;;MSM;Minn State Mankato;;1;pv;3.37;M;;46;;;754534GRA*KEDI
+D;Christianson;Callie;;f;;COMO;Concordia Moorhead;;4;800;02:25.5;M;;206;;;754798CAL*CHRI
+D;Wahlin;Carl;;m;;COMO;Concordia Moorhead;;1;5000;16:44.3;M;;148;;;755253CAR*WAHL
+D;Lindell;Kayla;;f;;MSM;Minn State Mankato;;2;hj;1.53;M;;100;;;755404KAY*LIND
+D;Uhrich;Melissa;;f;;COMO;Concordia Moorhead;;2;1500;05:04.0;M;;221;;;758198MEL*UHRI
+D;Uhrich;Melissa;;f;;COMO;Concordia Moorhead;;2;3000steeple;;M;;221;;;758198MEL*UHRI
+D;Folken;Christian;;m;;STOL;St. Olaf;;4;800;;M;;74;;;758335CHR*FOLK
+D;Laack-Veeder;Thor;;m;;Carl;Carleton;;3;1500;04:22.9;M;;109;;;761800THO*LAAC
+D;Ryan;Anna;;f;;MSM;Minn State Mankato;;4;dt;41.28;M;;97;;;762952ANN*RYAN
+D;Edinburgh;Zach;;m;;Carl;Carleton;;1;1500;04:33.2;M;;38;;;768855ZAC*EDIN
+D;Ambrose;Jacob;;m;;BELU;Bethany Lutheran;;1;110h;20.15;M;;13;;;769481JAC*AMBR
+D;Ambrose;Jacob;;m;;BELU;Bethany Lutheran;;1;400h;;M;;13;;;769481JAC*AMBR
+D;Ambrose;Jacob;;m;;BELU;Bethany Lutheran;;1;tj;;M;;13;;;769481JAC*AMBR
+D;Risan;Samantha;;f;;COMO;Concordia Moorhead;;4;100;13.94;M;;150;;;770364SAM*RISA
+D;Risan;Samantha;;f;;COMO;Concordia Moorhead;;4;lj;4.92;M;;150;;;770364SAM*RISA
+D;Nelson;Hans-Kristof;;m;;COMO;Concordia Moorhead;;2;110h;20.52;M;;128;;;772476HAN*NELS
+D;Nelson;Hans-Kristof;;m;;COMO;Concordia Moorhead;;2;dt;27.57;M;;128;;;772476HAN*NELS
+D;Nelson;Hans-Kristof;;m;;COMO;Concordia Moorhead;;2;jav;29.36;M;;128;;;772476HAN*NELS
+D;Nelson;Hans-Kristof;;m;;COMO;Concordia Moorhead;;2;hj;;M;;128;;;772476HAN*NELS
+D;Green;Kiley;;f;;STBE;St. Benedict;;2;1500;05:03.3;M;;104;;;774842KIL*GREE
+D;Ullrich;Rachel;;f;;STOL;St. Olaf;;3;1500;06:04.9;M;;202;;;775072RAC*ULLR
+D;Bratberg;Allison;;f;;STBE;St. Benedict;;3;pv;2.77;M;;136;;;779190ALLDBRAT
+D;Bye;Erik;;m;;COMO;Concordia Moorhead;;2;sp;11.44;M;;124;;;781500ERI*BYE*
+D;Bye;Erik;;m;;COMO;Concordia Moorhead;;2;ht;35.25;M;;124;;;781500ERI*BYE*
+D;Bye;Erik;;m;;COMO;Concordia Moorhead;;2;jav;40.55;M;;124;;;781500ERI*BYE*
+D;Peterson;Ruth;;f;;COMO;Concordia Moorhead;;1;100;13.42;M;;149;;;790483RUT*PETE
+D;Peterson;Ruth;;f;;COMO;Concordia Moorhead;;1;200;28.02;M;;149;;;790483RUT*PETE
+D;Peterson;Ruth;;f;;COMO;Concordia Moorhead;;1;lj;4.91;M;;149;;;790483RUT*PETE
+D;Peterson;Ruth;;f;;COMO;Concordia Moorhead;;1;tj;10.2;M;;149;;;790483RUT*PETE
+D;Huereque;Cheyenne;;f;;BELU;Bethany Lutheran;;1;pv;;M;;5;;;790846CHE*HUER
+D;Huereque;Cheyenne;;f;;BELU;Bethany Lutheran;;1;pv;;M;;5;;;790846CHE*HUER
+D;Macki;Anna;;f;;STCA;St. Catherine;;1;pv;;M;;140;;;795089ANN*MACK
+D;Dehkes;Pete;;m;;Carl;Carleton;;1;hj;1.88;M;;25;;;800433PET*DEHK
+D;Young;Cole;;m;;COMO;Concordia Moorhead;;2;800;;M;;130;;;804531COL*YOUN
+D;Young;Cole;;m;;COMO;Concordia Moorhead;;2;jav;43.78;M;;130;;;804531COL*YOUN
+D;Wright;Gabe;;m;;COMO;Concordia Moorhead;;2;110h;17.97;M;;123;;;809809GAB*WRIG
+D;Wright;Gabe;;m;;COMO;Concordia Moorhead;;2;lj;5.71;M;;123;;;809809GAB*WRIG
+D;Wright;Gabe;;m;;COMO;Concordia Moorhead;;2;tj;12;M;;123;;;809809GAB*WRIG
+D;Wright;Gabe;;m;;COMO;Concordia Moorhead;;2;dt;24.06;M;;123;;;809809GAB*WRIG
+D;Wright;Gabe;;m;;COMO;Concordia Moorhead;;2;hj;1.83;M;;123;;;809809GAB*WRIG
+D;Christian;Morgan;;f;;COMO;Concordia Moorhead;;4;1500;04:57.9;M;;223;;;810951MOR*CHRI
+D;Johnson;Olivia;;f;;COMO;Concordia Moorhead;;2;sp;12.15;M;;170;;;814272OLI*JOHN
+D;Johnson;Olivia;;f;;COMO;Concordia Moorhead;;2;dt;31.76;M;;170;;;814272OLI*JOHN
+D;Johnson;Olivia;;f;;COMO;Concordia Moorhead;;2;ht;38.46;M;;170;;;814272OLI*JOHN
+D;Johnson;Olivia;;f;;COMO;Concordia Moorhead;;2;jav;31.58;M;;170;;;814272OLI*JOHN
+D;Sederquist;Ryan;;m;;COMO;Concordia Moorhead;;4;5000;;M;;144;;;816344RYADSEDE
+D;Clevenger;Ashton;;f;;STCA;St. Catherine;;1;ht;36.4;M;;31;;;816868ASH*CLEV
+D;Dobbs;Henry;;m;;COMO;Concordia Moorhead;;3;5000;16:59.6;M;;138;;;836724HEN*DOBB
+D;McGuire;Dan;;m;;COMO;Concordia Moorhead;;2;100;12.13;M;;111;;;837738DAN*MCGU
+D;McGuire;Dan;;m;;COMO;Concordia Moorhead;;2;200;;M;;111;;;837738DAN*MCGU
+D;Brandes;Laura;;f;;STBE;St. Benedict;;3;1500;05:46.9;M;;75;;;841494LAUDBRAN
+D;Russ;Emma;;f;;Carl;Carleton;;2;200;29.25;M;;231;;;841727EMM*RUSS
+D;Olawsky;Evan;;m;;Carl;Carleton;;2;1500;04:25.0;M;;35;;;843502EVA*OLAW
+D;Raney;Elise;;f;;STOL;St. Olaf;;4;hj;1.58;M;;194;;;844507ELI*RANE
+D;Madden;Chris;;m;;Carl;Carleton;;1;100;;M;;105;;;845097CHR*MADD
+D;Wilson;Ellie;;f;;Carl;Carleton;;3;100;13.5;M;;230;;;849148ELL*WILS
+D;Wilson;Ellie;;f;;Carl;Carleton;;3;200;27.14;M;;230;;;849148ELL*WILS
+D;Castillo;Spencer;;m;;STOL;St. Olaf;;2;1500;04:30.0;M;;94;;;855434SPE*CAST
+D;Reeves;Ian;;m;;Carl;Carleton;;3;100;12.5;M;;48;;;857667IAN*REEV
+D;Johnson;Anna;;f;;STOL;St. Olaf;;2;pv;2.77;M;;226;;;862286ANN*JOHN
+D;McFarlin;James;;m;;STOL;St. Olaf;;2;100;;M;;64;;;867924JAM*MCFA
+D;McFarlin;James;;m;;STOL;St. Olaf;;2;200;;M;;64;;;867924JAM*MCFA
+D;Rachel;Winona;;f;;Carl;Carleton;;1;800;02:22.2;M;;131;;;870585WIN*RACH
+D;Levy;Ben;;m;;Carl;Carleton;;3;1500;04:30.3;M;;34;;;880340BEN*LEVY
+D;Johnson;Avery;;f;;Carl;Carleton;;3;jav;33.79;M;;148;;;884048AVE*JOHN
+D;Kirkeide;Courtney;;f;;STCA;St. Catherine;;1;800;02:31.0;M;;20;;;885855COU*KIRK
+D;Kirkeide;Courtney;;f;;STCA;St. Catherine;;1;jav;22.41;M;;20;;;885855COU*KIRK
+D;Farquhar;Lauren;;f;;BELU;Bethany Lutheran;;1;400h;74.25;M;;10;;;894980LAU*FARQ
+D;Farquhar;Lauren;;f;;BELU;Bethany Lutheran;;1;3000steeple;12:21.8;M;;10;;;894980LAU*FARQ
+D;McIntosh;Erin;;f;;STOL;St. Olaf;;1;1500;05:39.5;M;;55;;;896708ERI*MCIN
+D;Schmiel;Laura;;f;;STOL;St. Olaf;;2;1500;05:13.2;M;;68;;;897877LAU*SCHM
+D;Evans;Marra;;f;;STOL;St. Olaf;;1;800;03:06.3;M;;200;;;898371MAR*EVAN
+D;Hendrickson;Joe;;m;;COMO;Concordia Moorhead;;1;110h;19.48;M;;118;;;898809JOE*HEND
+D;Hendrickson;Joe;;m;;COMO;Concordia Moorhead;;1;lj;5.29;M;;118;;;898809JOE*HEND
+D;Hendrickson;Joe;;m;;COMO;Concordia Moorhead;;1;dt;32.79;M;;118;;;898809JOE*HEND
+D;Hendrickson;Joe;;m;;COMO;Concordia Moorhead;;1;jav;34.46;M;;118;;;898809JOE*HEND
+D;Nicole;Larson;;f;;MSM;Minn State Mankato;;1;pv;3.69;M;;45;;;900960NIC*LARS
+D;Fulton;Emma;;f;;STOL;St. Olaf;;2;pv;2.92;M;;224;;;905719EMM*FULT
+D;Owen;Julia;;f;;BELU;Bethany Lutheran;;1;100h;21.76;M;;11;;;907576JUL*OWEN
+D;Owen;Julia;;f;;BELU;Bethany Lutheran;;1;400h;95.27;M;;11;;;907576JUL*OWEN
+D;Wildauer;Timothy;;m;;BELU;Bethany Lutheran;;2;200;;M;;7;;;907947TIM*WILD
+D;Wildauer;Timothy;;m;;BELU;Bethany Lutheran;;2;400;65.65;M;;7;;;907947TIM*WILD
+D;Sutton;Kao;;f;;Carl;Carleton;;4;sp;13.28;M;;146;;;909423KAO*SUTT
+D;Sutton;Kao;;f;;Carl;Carleton;;4;dt;39.82;M;;146;;;909423KAO*SUTT
+D;Longenbach;Sam;;m;;STOL;St. Olaf;;1;800;02:09.4;M;;77;;;910214SAM*LONG
+D;Trezona;Allison;;f;;STOL;St. Olaf;;1;800;02:25.2;M;;58;;;912191ALL*TREZ
+D;Bollig;Brandi;;f;;STBE;St. Benedict;;2;100h;17.75;M;;89;;;915380BRA*BOLL
+D;Bollig;Brandi;;f;;STBE;St. Benedict;;2;400h;74.02;M;;89;;;915380BRA*BOLL
+D;Bollig;Brandi;;f;;STBE;St. Benedict;;2;tj;9.35;M;;89;;;915380BRA*BOLL
+D;Banaian;Esther;;f;;STBE;St. Benedict;;2;5000;20:30.0;M;;113;;;921265EST*BANA
+D;Anderson;Nick;;m;;COMO;Concordia Moorhead;;2;hj;;M;;135;;;931424NIC*ANDE
+D;Thompson;Jenna;;f;;STCA;St. Catherine;;1;800;02:38.5;M;;23;;;932048JEN*THOM
+D;Westermeier;Kristin;;f;;COMO;Concordia Moorhead;;2;1500;06:00.9;M;;216;;;934147KRI*WEST
+D;Skow-Anderson;Anna;;f;;COMO;Concordia Moorhead;;2;200;;M;;165;;;935275ANN*SKOW
+D;Skow-Anderson;Anna;;f;;COMO;Concordia Moorhead;;2;800;;M;;165;;;935275ANN*SKOW
+D;Skow-Anderson;Anna;;f;;COMO;Concordia Moorhead;;2;100h;;M;;165;;;935275ANN*SKOW
+D;Skow-Anderson;Anna;;f;;COMO;Concordia Moorhead;;2;lj;4.52;M;;165;;;935275ANN*SKOW
+D;Skow-Anderson;Anna;;f;;COMO;Concordia Moorhead;;2;sp;10.4;M;;165;;;935275ANN*SKOW
+D;Skow-Anderson;Anna;;f;;COMO;Concordia Moorhead;;2;dt;31.37;M;;165;;;935275ANN*SKOW
+D;Skow-Anderson;Anna;;f;;COMO;Concordia Moorhead;;2;jav;24.43;M;;165;;;935275ANN*SKOW
+D;Skow-Anderson;Anna;;f;;COMO;Concordia Moorhead;;2;hj;;M;;165;;;935275ANN*SKOW
+D;Malimanek;Lucas;;m;;BELU;Bethany Lutheran;;1;800;02:08.7;M;;16;;;936721LUC*MALI
+D;Malimanek;Lucas;;m;;BELU;Bethany Lutheran;;1;1500;04:22.9;M;;16;;;936721LUC*MALI
+D;McMurtry;Justin;;m;;MSM;Minn State Mankato;;2;400h;;M;;62;;;940735JUS*MCMU
+D;Goss;Abigail;;f;;BELU;Bethany Lutheran;;1;sp;6.61;M;;18;;;941345ABI*GOSS
+D;Goss;Abigail;;f;;BELU;Bethany Lutheran;;1;jav;16.72;M;;18;;;941345ABI*GOSS
+D;Odetola;Love;;f;;STOL;St. Olaf;;4;ht;34.64;M;;191;;;942954LOV*ODET
+D;Quintanilla;Melissa;;f;;STBE;St. Benedict;;3;1500;05:36.4;M;;138;;;946720MEL*QUIN
+D;Smith;Cameron;;m;;STOL;St. Olaf;;4;100;11.78;M;;102;;;949147CAM*SMIT
+D;Ramsdell;Christina;;f;;STCA;St. Catherine;;3;ht;41.08;M;;30;;;949819CHR*RAMS
+D;Wintheiser;Grant;;m;;STOL;St. Olaf;;3;1500;;M;;83;;;951205GRA*WINT
+D;Veldman;Frank;;m;;MSM;Minn State Mankato;;1;hj;1.98;M;;51;;;952815FRA*VELD
+D;Moldstad;Brittany;;f;;BELU;Bethany Lutheran;;1;lj;4.11;M;;7;;;953203BRI*MOLD
+D;Moldstad;Brittany;;f;;BELU;Bethany Lutheran;;1;tj;8.94;M;;7;;;953203BRI*MOLD
+D;Moldstad;Brittany;;f;;BELU;Bethany Lutheran;;1;hj;1.43;M;;7;;;953203BRI*MOLD
+D;Gathje;Anne;;f;;STBE;St. Benedict;;2;1500;05:24.6;M;;121;;;965571ANN*GATH
+D;Floersheim;Ingrid;;f;;COMO;Concordia Moorhead;;2;800;02:40.2;M;;208;;;967059ING*FLOE
+D;Rutz;Chelsea;;f;;STBE;St. Benedict;;1;3000steeple;12:44.2;M;;137;;;971449CHE*RUTZ
+D;Coffey;Joe;;m;;STOL;St. Olaf;;1;1500;04:08.5;M;;87;;;988515JOE*COFF
+D;Hagans;Brandon;;m;;Carl;Carleton;;2;110h;17.59;M;;27;;;996276BRA*HAGA
+D;Hagans;Brandon;;m;;Carl;Carleton;;2;400h;61.88;M;;27;;;996276BRA*HAGA
+D;Thompson;Liza;;f;;COMO;Concordia Moorhead;;1;pv;2.47;M;;177;;;997970LIZ*THOM
+D;Cerbin;Flannery;;f;;;;;0;5000;;M;;36;;;
