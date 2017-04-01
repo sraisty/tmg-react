@@ -1,4 +1,4 @@
-import {DEFAULT_DIVISION} from '../../lib/tfconstants.js';
+import {DEFAULT_DIVISION} from '../../lib/tfconstants';
 
 /**
 * The Athlete Class describes each athlete (duh) as a person.
@@ -82,7 +82,7 @@ class Athlete {
       // so immediately return that the comparison to Athlete is false
       // if those fields are not Provided
       warning = 'Need first name, last name and gender to compare';
-      return {false, warning};
+      return {ok: false, warning};
     }
 
     if ((p.firstName.toUpperCase() === this.firstName.toUpperCase()) &&
@@ -94,18 +94,18 @@ class Athlete {
       if (p.middleInitial.toUpperCase() !== this.middleInitial.toUpperCase()) {
         // TODO - warn that the middle Intitals don't match
         warning = warning + ': middle Initial';
-        return {false, warning};
+        return {ok: false, warning};
       }
       if (p.gender !== this.gender.toUpperCase()) {
         // TODO - warn that the genders don't match
         warning = warning + ': gender';
-        return {false, warning};
+        return {ok: false, warning};
       }
       if (p.institutionName.toUpperCase() !==
           this.institutionName.toUpperCase()) {
         // TODO - warn that the institution names don't match
-        warning = warning + ': institutionName';
-        return {false, warning};
+        warning += ': institutionName';
+        return {ok: false, warning};
       }
 
       // schoolYear doesn't always exist, but if it does the two athletes both
@@ -114,18 +114,18 @@ class Athlete {
       if (!p.schoolYear && !this.schoolYear) {
           // neither athlete had schoolYear defined
           warning = '';
-          return {true, warning};
+          return {ok: true, warning};
       }
       if (p.schoolYear && this.schoolYear &&
           (p.schoolYear.toUpperCase() === this.schoolYear.toUpperCase())) {
             warning = '';
-            return {true, warning};
+            return {ok: true, warning};
       }
-    };
+    }
     warning = 'Athletes do not match';
-    return {false, warning};
+    return {ok: false, warning};
   } // end isSame
 
 } // end class Athlete
 
-export {Athlete};
+export default Athlete;

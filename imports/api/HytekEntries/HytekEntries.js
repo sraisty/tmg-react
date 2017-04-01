@@ -1,6 +1,6 @@
 import fs from 'fs';
 import parse from 'csv-parse/lib/sync';
-import * as hytek from './hytekConstants.js';
+import * as hytek from './hytekConstants';
 
 
 /**
@@ -88,7 +88,6 @@ class HytekEntries {
    * (Q or R event type).
    */
   parseHtLine(record) {
-    debugger;
     console.log(record);
     const lineType = record[0];
     let lineFieldDefs;
@@ -135,7 +134,8 @@ class HytekEntries {
         // empty line. Just return
         this.warnings.push('Skipping empty line.');
         recordType = 'emptyLine';
-        return {false, recordType};
+        return {ok: false, recordType};
+        break;
       }
       default: {
         throw new Error('FILE FORMAT ERROR: Bad Line Type: ' + recordType);
@@ -155,11 +155,11 @@ class HytekEntries {
         this.warnings.push('Skipping bad line because of bad field. Field: ' +
               fieldDef.key + ', Value: ' + fieldValue +
               '; RecordType: ' + recordType);
-        return {false, recordType};
+        return {ok: false, recordType};
       }
       if (fieldDef.allcaps) {
         fieldValue = fieldValue.toUpperCase();
-      };
+      }
       line[fieldDef.key] = fieldValue;
     }
 
@@ -167,7 +167,7 @@ class HytekEntries {
     if (recordType === 'relayEntry') {
       const ok = this.parseRelayRunners(line, record, lineType);
       if (!ok) {
-        throw new Error('PARSE ERROR on a Relay Line: ' + err);
+        throw new Error('PARSE ERROR on a Relay Line: ' + ok);
       }
     }
     return {line, recordType};
@@ -234,7 +234,6 @@ class HytekEntries {
    * @return {Boolean} - line parsed ok without errors
    */
   parseRelayRunners(line, record, lineType) {
-    debugger;
     let runnerIndexInRecord;
     let fieldsPerRunner;
     line.runners = [];
@@ -244,7 +243,7 @@ class HytekEntries {
     } else { // lineType should 'R'
         runnerIndexInRecord = 10;
         fieldsPerRunner = 7;
-    };
+    }
 
     let runnerNumber = 0;
     while (runnerIndexInRecord < record.length) {
@@ -263,24 +262,24 @@ class HytekEntries {
         }
         if (fieldDef.allcaps) {
           fieldValue = fieldValue.toUpperCase();
-        };
+        }
         runner[fieldDef.key] = fieldValue;
-      }; // end for
+      } // end for
       line.runners[runnerNumber] = runner;
       runnerNumber++;
       runnerIndexInRecord += fieldsPerRunner;
-    };
+    }
     if (!this.convertHytekRelayCodes(line)) {
       this.warnings.push(
         'ERROR - Skipping Line due to unknown Hytek relay eventCode (' +
         line.eventCode + ').  Line: ' + line
       );
       return false;
-    };
+    }
     console.log('RELAY: ' + runnerNumber + ' Runners');
     console.log('RELAY: ' + JSON.stringify(line, null, 4));
     return true;
-  };
+  }
 
   /**
    * Convert HyTek's Relay Event Codes to Ours
@@ -312,4 +311,4 @@ class HytekEntries {
   }
 }
 
-export {HytekEntries};
+export default HytekEntries;

@@ -1,9 +1,9 @@
-import {HytekEntries} from '../../imports/api/HytekEntries/HytekEntries.js';
 import {chai} from 'meteor/practicalmeteor:chai';
-const expect = chai.expect;
-const assert = chai.assert;
 
-const FILEBASE = '/Users/sraisty/Projects/TrackMeetGenius/test-data/';
+import {HytekEntries} from '../../imports/api/HytekEntries/HytekEntries';
+
+const expect = chai.expect;
+const FILEBASE = './test-data/';
 
 
 describe('Test HyTek Entries Module', function() {
@@ -172,7 +172,7 @@ describe('Test HyTek Entries Module', function() {
     it('Parses a file with one fully-filled, correct D record', function() {
       const htE = new HytekEntries(FILEBASE + 'D-Line-Normal.txt');
       expect(htE.indivEntries).to.have.length(1);
-c
+      const iEnt = htE.indivEntries[0];
       expect(iEnt.firstName).to.deep.equal('Cersei');
       expect(iEnt.lastName).to.deep.equal('Lannister');
       expect(iEnt.middleInitial).to.deep.equal('');

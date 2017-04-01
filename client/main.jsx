@@ -13,18 +13,18 @@ import '../imports/styles/default-bootstrap/bootstrap-theme.css';
 import '../imports/styles/tmg_bootstrap.css';
 // import '../imports/styles/app/utils.scss';
 
-const App = () => {
-  return(
-    <div>
-        <Base />
-    </div>
 
+const App = () => {
+  return (
+    <div>
+      <Base />
+    </div>
   );
-}
+};
 
 Meteor.startup( () => {
   ReactDOM.render(
     <App />,
-    document.getElementById('app')
+    document.getElementById('app'),
   );
 });

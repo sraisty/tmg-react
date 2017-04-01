@@ -2,27 +2,22 @@
  *
  *Serverside only
  **/
-
-
 import {Meteor} from 'meteor/meteor';
-import {Meet} from '../imports/api/Meet.js';
-import {HytekEntries} from '../imports/api/HytekEntries/HytekEntries.js';
-import {Athlete} from '../imports/api/Athlete.js';
+import Meet from '../api/Meet';
+import HytekEntries from '../api/HytekEntries/HytekEntries';
+import Athlete from '../api/Athlete';
+import Entry from '../api/Entry';
 
-const TESTFILEBASE = './test/test-data/';
-
-if(Meteor.isServer) {
-  console.log('Hello, SERVER!');
-}
+const TESTFILEBASE = './test-data/';
 
 
 Meteor.startup(() => {
   // tests.allTestsNewAthlete();
   // tests.testAddToMyArray();
-  let meetInfo = promptNewMeetInfo();
-  let myMeet = new Meet(meetInfo);
+  const meetInfo = promptNewMeetInfo();
+  const myMeet = new Meet(meetInfo);
 
-  let htFilename = promptHtFilename();
+  const htFilename = promptHtFilename();
   try {
     importHytekEntries(myMeet, htFilename);
   } catch(e) {
@@ -42,23 +37,23 @@ function importHytekEntries(myMeet, filename) {
   try {
     htE = new HytekEntries(filename);
   } catch (e) {
-    console.log('FILE ERROR OPENING HYTEK ENTRY FILE ' + e.message);
+    console.log('FILE ERROR OPENING HYTEK ENTRY FILE ', e.message);
   }
 
   let athleteInfo;
   console.log('PRINTING htE: ', htE);
   for (athleteInfo of htE.athleteRecs) {
-    athlete = new Athlete(athleteInfo);
+    const athlete = new Athlete(athleteInfo);
     try {
       myMeet.addAthleteToMeet(athlete);
     } catch(e) {
-      console.log('ERROR adding athlete to Meet: ' + e.message);
+      console.log('ERROR adding athlete to Meet: ', e.message);
     }
   }
 
   let indivEntryInfo;
   for (indivEntryInfo of htE.indivEntries) {
-    entry = new Entry(indivEntryInfo);
+    const entry = new Entry(indivEntryInfo);
     try {
       // TODO make sure this athlete is already added to meet
       myMeet.addEntryToMeet(entry);
@@ -69,11 +64,11 @@ function importHytekEntries(myMeet, filename) {
 
   let relayEntryInfo;
   for (relayEntryInfo of htE.relayEntries) {
-    entry = new Entry(relayEntryInfo);
+    const entry = new Entry(relayEntryInfo);
     try {
       myMeet.addEntryToMeet(entry);
     } catch(e) {
-      console.log('ERROR adding relay entry to Meet: ' + e.message);
+      console.log('ERROR adding relay entry to Meet: ', e.message);
     }
   }
 } // end importHytekEntries
@@ -93,7 +88,7 @@ function promptHtFilename() {
 function promptNewMeetInfo() {
   // TODO - this is just a stub for now.
   return {
-    meetName: 'Sue & Jamey\s Wicked Awesome Invitational',
+    meetName: 'Sue & Jamey\'s Wicked Awesome Invitational',
     startDate: '02/01/2017',
     venueName: 'Los Gatos High School',
     city: 'Los Gatos',

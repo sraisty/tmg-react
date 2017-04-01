@@ -33,21 +33,19 @@ class MeetEvent {
     // array of {athlete: convertedSeedMark} pairs
     this.entrants = [];
     this.competitionGroups = [];
-    debugger;
   }
 
   /**
    * @param {object} params
    */
   addEventEntry(params) {
-    entry = {
+    const entry = {
       athleteID: params.athleteID,
       convertedSeedMark: params.seedMark,
       division: params.division,
     };
     this.entrants.push(entry);
-    debugger;
   }
 }
 
-export {MeetEvent};
+export default MeetEvent;

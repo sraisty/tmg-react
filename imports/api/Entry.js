@@ -1,4 +1,4 @@
-import * as tf from '../../lib/tfconstants.js';
+import * as tf from '../../lib/tfconstants';
 
 /**
 * The Entry Class describes the entry that an Athlete
@@ -84,13 +84,13 @@ class Entry {
     this.markMeters = undefined;
     this.measureUnit = 'seconds';
     if (this.markSubmitted) {
-      convertMarkToNumber();
+      this.convertMarkToNumber();
     }
   }
 
   convertMarkToNumber() {
     if (this.fieldEvent()) {
-      if (this.measureSys = 'M') { // Metric
+      if (this.measureSys == 'M') { // Metric
         // Metric field marks are always calc'd to centimeters, which
         // are hundreths of a meter, so make sure it's in proper XX.XX
         // format. (Exception: Javelin might be above 100m (that's a
@@ -103,7 +103,7 @@ class Entry {
         // measure system is Imperial.  Need to parse following formats:
         //  12-10.25", 12', 121025, XX'XX.XX". the precision could be up
         // to 0.25 inch
-        const distance = parseImplDist(this.markSubmitted);
+        const distance = parseImpDist(this.markSubmitted);
         if (!distance) {
           return false;
         }
@@ -288,12 +288,12 @@ function fieldmarkImpToMetric(feet, inches) {
   const CONVERT_ITOM_METER_PER_INCH = parseFloat('0.0254');
   const CONVERT_ITOM_ROUNDUP_CUTOFF = parseFloat('0.00685');
 
-  let meters = (parseFloat(feet) * CONVERT_ITOM_METER_PER_FOOT) +
+  const meters = (parseFloat(feet) * CONVERT_ITOM_METER_PER_FOOT) +
                 (parseFloat(inches) * CONVERT_ITOM_METER_PER_INCH);
 
   // truncate the number at XX.XX (2 decimal places) to get the nearest lower
   // centimeter
-  adjMeters = Math.trunc(meters*100)/100;
+  let adjMeters = Math.trunc(meters*100)/100;
 
   // ... but if the the truncated portion above the
   const fracCentimenters = meters - adjMeters;

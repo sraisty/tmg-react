@@ -2,8 +2,8 @@
 
 
 // import {Athlete} from './Athlete.js';
-import {DEFAULT_COUNTRY} from '../../lib/tfconstants.js';
-import * as tf from '../../lib/tfconstants.js';
+
+import * as tf from '../../lib/tfconstants';
 
 /**
  * @class Meet
@@ -37,7 +37,7 @@ class Meet {
       /**
        * @todo - return A new, UNIQUE meetID
        */
-    };
+    }
     this.meetName = params.meetName;
     this.startDate = params.startDate;
     this.venueName = params.venueName;
@@ -52,7 +52,7 @@ class Meet {
     }
 
     // If country is not provided, assume it's the USA
-    this.country = params.country || DEFAULT_COUNTRY;
+    this.country = params.country || tf.DEFAULT_COUNTRY;
 
     // If season is not provided, assume outdoor track
     this.seasonType = params.seasonType || tf.DEFAULT_SEASON;
@@ -108,7 +108,7 @@ class Meet {
     }
   }
 
-}; // end Meet class
+} // end Meet class
 
 /**
  * looks to see if "item" is already present in "myarray".  If it isn't
@@ -128,4 +128,4 @@ function helperAddToMyArray(item, myarray) {
   }
 }
 
-export {Meet};
+export default Meet;

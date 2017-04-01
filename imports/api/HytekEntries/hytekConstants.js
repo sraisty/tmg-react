@@ -2,7 +2,7 @@
  * From Hy-Tek Track & Field Meet Manager
  * http://www.hy-tekltd.com/User_Guides_HTML/TFMM6/index.html.
 *********************************************************************/
-import {ValidIndivEvents, ValidHyTekRelays} from '../../../lib/tfconstants.js';
+import {ValidIndivEvents, ValidHyTekRelays} from '../../../lib/tfconstants';
 
 
 export const ValidSchoolYears = ['4', '5', '6', '7', '8', '9', '10', '11', '12',

@@ -1,10 +1,8 @@
-import {Entry, parseEventTime, parseImpDist, fieldmarkImpToMetric} from '../../imports/api/Entry';
 import {chai} from 'meteor/practicalmeteor:chai';
+import {Entry, parseEventTime, parseImpDist, fieldmarkImpToMetric} from '../../imports/api/Entry';
 
 const expect = chai.expect;
-const assert = chai.assert;
 
-const FILEBASE = '/Users/sraisty/Projects/TrackMeetGenius/test-data/';
 
 const TestTimes = [
   {
@@ -205,7 +203,7 @@ describe('Test parsing and conversion of field distance marks', function() {
         expect(distance.inches == td.inches).to.be.ok;
 
         const metricDist = fieldmarkImpToMetric(td.feet, td.inches);
-        //        expect(metricDist).to.be.a('number');
+        expect(metricDist).to.be.a('number');
       });
     }
   });
@@ -328,17 +326,17 @@ describe('convertMarkToNumber', function() {
     });
 
     it('240\'6.25\" = 73.31m', function() {
-      metricDist = fieldmarkImpToMetric(240, 6.25);
+      let metricDist = fieldmarkImpToMetric(240, 6.25);
       expect(metricDist).to.equal('73.31');
     });
 
     it('34\'7.00\" = 10.54m', function() {
-      metricDist = fieldmarkImpToMetric(34, 7);
+      let metricDist = fieldmarkImpToMetric(34, 7);
       expect(metricDist).to.equal('10.54');
     });
 
     it('78\'11.5\" = 24.06m', function() {
-      metricDist = fieldmarkImpToMetric(78, 11.5);
+      let metricDist = fieldmarkImpToMetric(78, 11.5);
       expect(metricDist).to.equal('24.06');
     });
   });

@@ -1,8 +1,8 @@
-import {Athlete} from '../api/Athlete';
 import {Meteor} from 'meteor/meteor';
 import {chai} from 'meteor/practicalmeteor:chai';
 
-const assert = chai.assert;
+import {Athlete} from '../api/Athlete';
+
 const expect = chai.expect;
 
 describe('Test Athletes Class', function() {
@@ -30,7 +30,7 @@ describe('Test Athletes Class', function() {
     });
 
     it('Lowercase letter for gender gets converted to uppercase', function() {
-      const testAthlete = new Athlete( {
+      const testAthlete = new Athlete({
         firstName: 'John',   // space in name
         lastName: 'Snow', // hyphenation
         gender: 'm',
@@ -43,7 +43,7 @@ describe('Test Athletes Class', function() {
 
     it('New, unattached athlete with only required fields.',
       function() {
-        const testAthlete = new Athlete( {
+        const testAthlete = new Athlete({
           firstName: 'Arya',   // space in name
           lastName: 'Stark', // hyphenation
           gender: 'F',
@@ -64,7 +64,7 @@ describe('Test Athletes Class', function() {
 
     it('New unattached athlete with minimal fields + school year provided',
       function() {
-        const testAthlete = new Athlete( {
+        const testAthlete = new Athlete({
           firstName: 'Sansa',   // space in name
           lastName: 'Stark', // hyphenation
           gender: 'F',
@@ -78,7 +78,7 @@ describe('Test Athletes Class', function() {
         expect(testAthlete.institutionName).to.deep.equal('UNATTACHED');
         expect(testAthlete.schoolYear).to.deep.equal('SR');
         expect(testAthlete.divisionName).to.deep.equal('Varsity');
-      }
+      },
     );
 
     it('All Fields Are Provided', function() {
@@ -113,7 +113,7 @@ describe('Test Athletes Class', function() {
       });
       const compNum1 = testAthlete.competitorNum;
       const compNum2 = testAthlete2.competitorNum;
-      expect(compNum2).to.be.deep.equal(compNum1+1);
+      expect(compNum2).to.be.deep.equal(compNum1 + 1);
     });
 
     it('Throws an error when lastname is not provided.', function() {
