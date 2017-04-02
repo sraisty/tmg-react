@@ -43,15 +43,18 @@
     "root": "true",
     "parser": "babel-eslint",
     "parserOptions": {
+      "experimentalObjectRestSpread": true,
       "allowImportExportEverywhere": true,
       "ecmaVersion": 6,
       "ecmaFeatures": {
         "jsx": true
-      }
+      },
+      "sourceType": "module"
     },
     "env": {
       "meteor": true,
       "node": true,
+      "es6": true,
       "browser": true,
       "mocha": true
     },
@@ -83,6 +86,7 @@
         "error",
         "never"
       ],
+      "indent": ["error", 2],
       "comma-dangle": [
         "error",
         {
@@ -93,7 +97,23 @@
           "functions": "always-multiline"
         }
       ],
-      "no-mocha-arrows": "error"
+      "no-mocha-arrows": "error",
+      "indent": [
+          "error",
+          4
+      ],
+      "linebreak-style": [
+          "error",
+          "unix"
+      ],
+      "quotes": [
+          "error",
+          "single"
+      ],
+      "semi": [
+          "error",
+          "always"
+      ]
     }
   }
 }
