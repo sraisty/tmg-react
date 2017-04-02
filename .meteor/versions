@@ -28,7 +28,6 @@ diff-sequence@1.0.7
 ecmascript@0.6.3
 ecmascript-runtime@0.3.15
 ejson@1.0.13
-erasaur:meteor-lodash@4.0.0
 es5-shim@4.6.15
 fastclick@1.0.13
 geojson-utils@1.0.10
@@ -68,6 +67,7 @@ random@1.0.10
 reactive-var@1.0.11
 reload@1.1.11
 retry@1.0.9
+reywood:publish-composite@1.5.1
 routepolicy@1.0.12
 shell-server@0.2.3
 spacebars@1.0.15
