@@ -5,13 +5,13 @@ import MeetEventList from './MeetEventList';
 import DummyText from '../DevUtils/DummyText';
 
 class MeetEvents extends React.Component {
-  constructor (props) {
+  constructor(props) {
     super(props);
-    this.state={};
+    this.state = {};
   }
 
   render() {
-    return(
+    return (
       <Row>
         <Col xs={3}>
           <MeetEventList />

@@ -1,0 +1,10 @@
+{
+  "loglevel": {
+    "default": "trace"
+  },
+  "public": {
+    "loglevel": {
+      "default": "trace"
+    }
+  }
+}

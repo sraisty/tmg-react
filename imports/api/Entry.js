@@ -1,10 +1,14 @@
 import * as tf from '../../lib/tfconstants';
+import {parseImpDist, fieldmarkImpToMetric} from './parseConvertDistances';
+import {parseEventTime} from './parseConvertTimes';
 
 /**
 * The Entry Class describes the entry that an Athlete
-* has in an event within the meet.  If the athlete is
-* entered into 4 events, he/she will have 4 seprarate
+* has in a particular event within the meet.  If the athlete is
+* entered into 4 events, he/she will have 4 separarate
 * entries.
+* Note that for "combined events" (pentathlon, decathlon, etc.) that there is
+* ONE entry, even though there are multiple "sub-events"
 */
 class Entry {
 
@@ -48,7 +52,7 @@ class Entry {
     if (params.gender) {
       this.gender = params.gender.toUpperCase();
     } else {
-        throw new Error('ERROR new Entry(): missing gender');
+      throw new Error('ERROR new Entry(): missing gender');
     }
 
     if (params.eventCode) {
@@ -65,7 +69,7 @@ class Entry {
 
     // If no division is supplied, default to the Varsity Division
     this.divisionName = params.divisionName || tf.DEFAULT_DIVISION;
-    console.log('DEFAULT_DIVISION is ' + tf.DEFAULT_DIVISION);
+    console.log(`DEFAULT_DIVISION is ${tf.DEFAULT_DIVISION}`);
 
     // The following fields are not required, so let them remain undefined
     // if necessary.
@@ -74,9 +78,8 @@ class Entry {
     this.measureSys = params.measureSys;
     this.competitorNum = params.competitorNum;
 
-    if (params.markSubmitted & !params.measureSys) {
-      throw new Error('Submitted a mark without measureSys ' +
-          '(Metric or English)');
+    if (params.markSubmitted && !params.measureSys) {
+      throw new Error('Submitted a mark without measureSys (Metric or Imperial)');
     }
 
     this.markSeconds = undefined;
@@ -90,7 +93,7 @@ class Entry {
 
   convertMarkToNumber() {
     if (this.fieldEvent()) {
-      if (this.measureSys == 'M') { // Metric
+      if (this.measureSys === 'M') { // Metric
         // Metric field marks are always calc'd to centimeters, which
         // are hundreths of a meter, so make sure it's in proper XX.XX
         // format. (Exception: Javelin might be above 100m (that's a
@@ -197,114 +200,7 @@ class Entry {
 
   }
 
-  getAthleteInfo() {
-
-  }
-
 
 } // end class Entry
 
-/**
- * Parse an event's time string into a time structure:
- * Acceptable times are hh:mm:ss.tt , mm:ss:tt , m:ss:t, ss.tt, ss.t
- * If only up to tenths of seconds, then shoudl include an "h" at end to
- * indicate hand-timed
- * @param {string} tStr
- * @return {object} duration
- * @return {string} duration.timeString
- * @return {number} duration.seconds
- * @return {number} duration.minutes
- * @return {number} duration.hours
- * @return {boolean} duration.handTimed
- */
-function parseEventTime(tStr) {
-  let duration = {};
-
-  const validTimeRegEx = /^(\d\d?:)?(\d\d?:)?\d\d?\.\d\d?h?$/;
-  let isValid = validTimeRegEx.exec(tStr);
-  if (!isValid) {
-    return false;
-  }
-
-  const secRegEx = /\d\d?\.\d\d?/;
-  duration.seconds = secRegEx.exec(tStr)[0];
-
-  const handTimedRegEx = /\.\dh$/;
-  const handTimed = handTimedRegEx.exec(tStr);
-  duration.handTimed = (handTimed) ? true : false;
-
-  const minRegEx = /(\d\d?):\d\d\.\d\d?/;
-  const minFound = minRegEx.exec(tStr);
-  if (minFound) {
-    duration.minutes = minFound[1];
-  } else {
-    duration.minutes = 0;
-  }
-
-  const hoursRegEx = /(\d\d?):\d\d:\d\d\.\d\d?/;
-  const hoursFound = hoursRegEx.exec(tStr);
-  if (hoursFound) {
-    duration.hours = hoursFound[1];
-  } else {
-    duration.hours = 0;
-  }
-
-  return duration;
-}
-
-function parseImpDist(dStr) {
-  let distance = {};
-
-  const validDistanceRegEx = /^(\d\d?\d?)(?:\')?[-\s]?(\d\d?(\.\d\d?)?)?\"?$/;
-
-  const distanceFound = validDistanceRegEx.exec(dStr);
-  if (distanceFound) {
-    distance.feet = distanceFound[1];
-    distance.inches = distanceFound[2];
-    return distance;
-  }
-  return false;
-}
-
-function fieldmarkImpToMetric(feet, inches) {
-  // These constants are from Bob Spark's tables (former ATFS president) for
-  // converting field marks that were measured in imperial to the 1/4 inch into
-  // meters. (note: these tables aren't for the reverse conversion)
-  // The original tables are here:
-  // http://easyweb.easynet.co.uk/~rsparks/convq.htm
-  // These tables were reverse-engineered into a formula that uses the below
-  // constants, as detailed here:
-  // http://trackandfieldnews.com/discussion/archive/index.php/t-131069.html
-
-  // "Having analyzed Spark's tables them I see though that there is a logical
-  // math rule:
-  // Constants: 1 foot=0.3048m, 1 inch=0.0254m
-  // 1)Multiply the exact number of feet and inches with the constants above.
-  // 2) If the following numbers after the whole centimeter (Like 32.13625 or
-  //    32.13852 is less then 685 then round down. Else round up.
-  // So 32.13684 is rounded to 32.13. 32.13685 is rounded to 32.14
-
-  const CONVERT_ITOM_METER_PER_FOOT = parseFloat('0.3048');
-  const CONVERT_ITOM_METER_PER_INCH = parseFloat('0.0254');
-  const CONVERT_ITOM_ROUNDUP_CUTOFF = parseFloat('0.00685');
-
-  const meters = (parseFloat(feet) * CONVERT_ITOM_METER_PER_FOOT) +
-                (parseFloat(inches) * CONVERT_ITOM_METER_PER_INCH);
-
-  // truncate the number at XX.XX (2 decimal places) to get the nearest lower
-  // centimeter
-  let adjMeters = Math.trunc(meters*100)/100;
-
-  // ... but if the the truncated portion above the
-  const fracCentimenters = meters - adjMeters;
-  if (fracCentimenters >= CONVERT_ITOM_ROUNDUP_CUTOFF) {
-    adjMeters += 0.01;
-  }
-  // Now, truncate to turn adjMeters into a 2-decimal number (in centimeters)
-  adjMeters = Math.trunc(adjMeters*100) / 100;
-  return adjMeters.toFixed(2);
-}
-
-
-export {Entry};
-export {parseEventTime, parseImpDist, fieldmarkImpToMetric};
+export default Entry;

@@ -9,13 +9,14 @@ class AlertsMenu extends React.Component {
   }
 
   render() {
-    return(
+    return (
       <NavDropdown
-          eventKey={1}
-          title="Alerts"
-          id="alerts-nav-dropdown"
-          onSelect={this.handleSelect}>
-        <MenuItem header><em>No Alerts. You're all caught up!</em></MenuItem>
+        eventKey={1}
+        title="Alerts"
+        id="alerts-nav-dropdown"
+        onSelect={this.handleSelect}
+      >
+        <MenuItem header><em>No Alerts. You are all caught up!</em></MenuItem>
         <MenuItem eventKey={2.1}>
           Event: See 100 Meter results
         </MenuItem>

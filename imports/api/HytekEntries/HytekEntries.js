@@ -8,7 +8,6 @@ import * as hytek from './hytekConstants';
  *  entries into a meet's events, imported from a Hytek semicolon delimited file
  */
 class HytekEntries {
-
   /**
    * Parses the HyTek entries file, adds the athletes (without duplication),
    * events, divisions, nd genders to the Meet
@@ -24,12 +23,12 @@ class HytekEntries {
     this.warnings = [];
 
     // TODO - Consider using the async version of reading File later.
-     const text = fs.readFileSync(filename, 'utf8');
+    const text = fs.readFileSync(filename, 'utf8');
 
     // parse returns a 2D array, where the 1st dimension is a "record" that
-    // corresponds to an entire line in the source file
+    // corresponds to an entire line in the source file.
     // The 2nd dimension specifies which semicolon-separated field within that
-    // line
+    // line.
     const records = parse(text, {
       rowDelimiter: '\r\n',
       delimiter: ';',
@@ -40,18 +39,18 @@ class HytekEntries {
       relax_column_count: true,
     });
 
-    for (let i=0; i<records.length; i++) {
+    for (let i = 0; i < records.length; i++) {
       // record is one line within the source file
       const record = records[i];
 
-      let {line, recordType} = this.parseHtLine(record);
+      const {line, recordType} = this.parseHtLine(record);
       if (!line) {
         console.log('Skipping bad line');
-        this.warnings.push('htConstructor: Skipping bad line #' + i +
-              '; Record Type: ' + recordType);
+        this.warnings.push(
+          `htConstructor: Skipping bad line # ${i} | Record Type: ${recordType}`);
       } else {
-        console.log('Line: ' + line);
-        console.log('recordType: ' + recordType);
+        console.log(`Line: ${line}`);
+        console.log(`recordType: ${recordType}`);
         switch (recordType) {
           case 'athleteInfo': {
             this.athleteRecs.push(line);
@@ -69,7 +68,7 @@ class HytekEntries {
             break;
           }
           default: {
-            throw new Error('Unknown line type: \'' + recordType + '\'' );
+            throw new Error(`Unknown line type: ${recordType}`);
           }
         } // switch
       }
@@ -104,13 +103,13 @@ class HytekEntries {
       }
       case 'D': {
         lineFieldDefs = hytek.DLineFields;
-        recordType='indivEntry';
+        recordType = 'indivEntry';
         numFieldsToParse = record.length;
         break;
       }
       case 'E': {
         lineFieldDefs = hytek.ELineFields;
-        recordType='indivEntry';
+        recordType = 'indivEntry';
         numFieldsToParse = record.length;
         break;
       }
@@ -120,13 +119,13 @@ class HytekEntries {
       // the line object a little later.
       case 'Q': {
         lineFieldDefs = hytek.QLineFields;
-        recordType='relayEntry';
+        recordType = 'relayEntry';
         numFieldsToParse = lineFieldDefs.length;
         break;
       }
       case 'R': {
         lineFieldDefs = hytek.RLineFields;
-        recordType='relayEntry';
+        recordType = 'relayEntry';
         numFieldsToParse = lineFieldDefs.length;
         break;
       }
@@ -135,11 +134,9 @@ class HytekEntries {
         this.warnings.push('Skipping empty line.');
         recordType = 'emptyLine';
         return {ok: false, recordType};
-        break;
       }
       default: {
-        throw new Error('FILE FORMAT ERROR: Bad Line Type: ' + recordType);
-        break;
+        throw new Error(`FILE FORMAT ERROR: Bad Line Type: ${recordType}`);
       }
     }
 
@@ -152,9 +149,10 @@ class HytekEntries {
       if (!ok) {
         // if the field is okay, don't throw an error.
         // just return false so that we can skip the line
-        this.warnings.push('Skipping bad line because of bad field. Field: ' +
-              fieldDef.key + ', Value: ' + fieldValue +
-              '; RecordType: ' + recordType);
+        this.warnings.push(`Skipping bad line because of bad field.
+          Field: ${fieldDef.key}.
+          Value: ${fieldValue}.
+          RecordType: ${recordType}`);
         return {ok: false, recordType};
       }
       if (fieldDef.allcaps) {
@@ -167,7 +165,7 @@ class HytekEntries {
     if (recordType === 'relayEntry') {
       const ok = this.parseRelayRunners(line, record, lineType);
       if (!ok) {
-        throw new Error('PARSE ERROR on a Relay Line: ' + ok);
+        throw new Error(`PARSE ERROR on a Relay Line: ${ok}`);
       }
     }
     return {line, recordType};
@@ -180,25 +178,25 @@ class HytekEntries {
     // Note 1: The I record is optional and not required.
     // Note 2: For each athlete, there can be only one I record
 
-  // CHECK IF ATHLETE IS ALREADY IN ARRAY
+    // CHECK IF ATHLETE IS ALREADY IN ARRAY
 
-           // if (line)
-            // Check if this athlete was already added to the Meet
-          //   let found = false;
-          //   for (let j=0, max=this.athletes.length; j<max; j++) {
-          //     let athlete = this.athletes[j];
-          //     if (athlete.isSameAthlete(line)) {
-          //       found = true;
-          //       break;
-          //     }
-          //   }
-          //   if (found) {
-          //     console.log('Athlete already entered: ' +
-          //       line.firstName + ' ' + line.lastName);
-          //   } else {
-          //     //
-          //   }
-          // }
+    // if (line)
+    // Check if this athlete was already added to the Meet
+    //   let found = false;
+    //   for (let j=0, max=this.athletes.length; j<max; j++) {
+    //     let athlete = this.athletes[j];
+    //     if (athlete.isSameAthlete(line)) {
+    //       found = true;
+    //       break;
+    //     }
+    //   }
+    //   if (found) {
+    //     console.log('Athlete already entered: ' +
+    //       line.firstName + ' ' + line.lastName);
+    //   } else {
+    //     //
+    //   }
+    // }
   }
 
   /**
@@ -212,16 +210,19 @@ class HytekEntries {
     // Check if  field is too many characters long
     // according to HyTek file format.
     if (fieldValue.length > fieldDef.len) {
-       this.warnings.push('FILE PARSE ERROR: field value is too long. ' +
-          'field: '+ fieldDef.key + '; value: ' + fieldValue);
+      this.warnings.push(`FILE PARSE ERROR: field value is too long.
+        field: ${fieldDef.key}
+        value: ${fieldValue}`,
+      );
       return false;
     }
 
     // Check to make sure field values are legal
     if ((fieldDef.valid) && (fieldValue) &&
        !(fieldDef.valid.includes(fieldValue.toUpperCase()))) {
-      this.warnings.push('FILE PARSE ERROR: illegal values. Field Name: ' +
-            fieldDef.key + '; Field Value: ' + fieldValue);
+      this.warnings.push(`FILE PARSE ERROR: illegal values.
+        field ${fieldDef.key} value ${fieldValue}`
+      );
       return false;
     }
     return true;
@@ -238,11 +239,11 @@ class HytekEntries {
     let fieldsPerRunner;
     line.runners = [];
     if (lineType === 'Q') {
-        runnerIndexInRecord = 15;
-        fieldsPerRunner = 8;
+      runnerIndexInRecord = 15;
+      fieldsPerRunner = 8;
     } else { // lineType should 'R'
-        runnerIndexInRecord = 10;
-        fieldsPerRunner = 7;
+      runnerIndexInRecord = 10;
+      fieldsPerRunner = 7;
     }
 
     let runnerNumber = 0;
@@ -254,10 +255,8 @@ class HytekEntries {
         const fieldDef = hytek.RelayRunnerFieldDefs[i];
         let fieldValue = record[runnerIndexInRecord + i];
         if (!this.fieldOK(fieldValue, fieldDef)) {
-          this.warnings.push('ERROR - Skipping Line due to ' +
-              'Bad field: ' + fieldDef.key +
-              '; Value:' + fieldValue +
-              '; Line: ' + line);
+          this.warnings.push(`ERROR - Skipping Line due to
+              Bad field: ${fieldDef.key}; Value: ${fieldValue}; Line: ${line}`);
           return false;
         }
         if (fieldDef.allcaps) {
@@ -266,18 +265,18 @@ class HytekEntries {
         runner[fieldDef.key] = fieldValue;
       } // end for
       line.runners[runnerNumber] = runner;
-      runnerNumber++;
+      runnerNumber += 1;
       runnerIndexInRecord += fieldsPerRunner;
     }
     if (!this.convertHytekRelayCodes(line)) {
       this.warnings.push(
-        'ERROR - Skipping Line due to unknown Hytek relay eventCode (' +
-        line.eventCode + ').  Line: ' + line
+        `ERROR - Skipping Line due to unknown Hytek relay eventCode
+          ${line.eventCode}, Line: ${line}`
       );
       return false;
     }
-    console.log('RELAY: ' + runnerNumber + ' Runners');
-    console.log('RELAY: ' + JSON.stringify(line, null, 4));
+    console.log(`RELAY ${runnerNumber} Runners`);
+    console.log(`RELAY: ${JSON.stringify(line, null, 4)}`);
     return true;
   }
 
@@ -298,13 +297,20 @@ class HytekEntries {
         line.eventCode = '4x100';
         break;
       }
+      case '800': {
+        line.eventCode = '4x200';
+        break;
+      }
       case '1600': {
         line.eventCode = '4x400';
         break;
       }
+      case '3200': {
+        line.eventCode = '4x800';
+        break;
+      }
       default: {
-        this.warnings.push('ERROR: Unknown HyTek Relay Code: ' +
-            hytekEventCode);
+        this.warnings.push(`ERROR: Unknown HyTek Relay Code: ${hytekEventCode}`);
       }
     }
     return true;

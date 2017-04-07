@@ -21,7 +21,7 @@ Meteor.startup(() => {
   try {
     importHytekEntries(myMeet, htFilename);
   } catch(e) {
-    console.log('ERROR: HyTek Import Error ' + e.message);
+    console.log(`ERROR: HyTek Import Error ' ${e.message}`);
   }
 
   myMeet.summarize();
@@ -58,7 +58,7 @@ function importHytekEntries(myMeet, filename) {
       // TODO make sure this athlete is already added to meet
       myMeet.addEntryToMeet(entry);
     } catch(e) {
-      console.log('ERROR adding individual entry to Meet: ' + e.message);
+      console.log(`ERROR adding individual entry to Meet: ${e.message}`);
     }
   }
 
@@ -79,7 +79,7 @@ function importHytekEntries(myMeet, filename) {
 function promptHtFilename() {
   // TODO - This is a STUB for now
   // return TESTFILEBASE + 'HtMeetEntries.txt';
-  return(TESTFILEBASE + 'R-Line-Normal.txt');
+  return(`${TESTFILEBASE} R-Line-Normal.txt`);
 }
 
 /**

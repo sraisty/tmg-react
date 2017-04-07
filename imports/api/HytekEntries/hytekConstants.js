@@ -5,8 +5,8 @@
 import {ValidIndivEvents, ValidHyTekRelays} from '../../../lib/tfconstants';
 
 
-export const ValidSchoolYears = ['4', '5', '6', '7', '8', '9', '10', '11', '12',
-        'FR', 'SO', 'JR', 'SR'];
+export const ValidSchoolYears =
+  ['4', '5', '6', '7', '8', '9', '10', '11', '12', 'FR', 'SO', 'JR', 'SR'];
 
 export const ValidCountryCodes = ['USA', 'AUS', 'CAN'];
 

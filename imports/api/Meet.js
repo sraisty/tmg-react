@@ -1,6 +1,5 @@
 /**  Class to represent the Track & Field Meet */
 
-
 // import {Athlete} from './Athlete.js';
 
 import * as tf from '../../lib/tfconstants';
@@ -75,19 +74,17 @@ class Meet {
    *
    */
   summarize() {
-    console.log('MEET SUMMARY: ' + this.meetName);
-    console.log('Divisions: ' + JSON.stringify(this.divisions));
-    console.log('Genders: ' + JSON.stringify(this.genders));
-    console.log('Institutions: ' + JSON.stringify(this.institutions));
+    console.log(`MEET SUMMARY:  ${this.meetName}`);
+    console.log(`Divisions: ${JSON.stringify(this.divisions)}`);
+    console.log(`Genders: ${JSON.stringify(this.genders)}`);
+    console.log(`Institutions: ${JSON.stringify(this.institutions)}`);
 
-    console.log(this.athletes.length +
-      ' Athletes Entered: ' +
+    console.log(this.athletes.length, 'Athletes Entered: ',
       JSON.stringify(this.athletes, null, 4));
 
-    console.log(this.meetEvents.length +
-      ' Events: ' +
+    console.log(this.meetEvents.length, 'Events: ',
       JSON.stringify(this.meetEvents, null, 4));
-    console.log('Meet Status: ' + this.meetStatus);
+    console.log('Meet Status: ', this.meetStatus);
   }
 
 
@@ -99,7 +96,7 @@ class Meet {
 
     for (alreadyEnteredAthlete of this.athletes) {
       if (!alreadyEnteredAthlete.isSame(athlete)) {
-        console.log('***ADDING NEW ATHLETE TO MEET:' + JSON.stringify(athlete));
+        console.log('***ADDING NEW ATHLETE TO MEET: ', JSON.stringify(athlete));
         this.athletes.push(athlete);
         helperAddToMyArray(athlete.divisionName, this.divisions);
         helperAddToMyArray(athlete.gender, this.genders);
@@ -118,12 +115,12 @@ class Meet {
  */
 function helperAddToMyArray(item, myarray) {
   let found = false;
-  for (let i=0, max=myarray.length; i<max; i++) {
-    if (myarray[i]===item) {
+  for (let i = 0, max = myarray.length; i < max; i++) {
+    if (myarray[i] === item) {
       found = true;
     }
   }
-  if (found != true) {
+  if (found !== true) {
     myarray.push(item);
   }
 }

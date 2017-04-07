@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import log from 'meteor/practicalmeteor:loglevel';
 
 import Base from './components/Layout/Base';
 
@@ -22,7 +23,7 @@ const App = () => {
   );
 };
 
-Meteor.startup( () => {
+Meteor.startup(() => {
   ReactDOM.render(
     <App />,
     document.getElementById('app'),

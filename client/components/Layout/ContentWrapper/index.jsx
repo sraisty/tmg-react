@@ -11,6 +11,6 @@ const ContentWrapper = () => {
       <TmgBreadcrumbs />
     </div>
   );
-}
+};
 
 export default ContentWrapper;

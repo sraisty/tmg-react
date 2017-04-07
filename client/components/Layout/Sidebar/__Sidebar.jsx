@@ -6,8 +6,8 @@ class Sidebar extends React.Component {
     this.state = {
       collapse: {
         mEvents: false,
-      }
-    }
+      },
+    };
   }
   render() {
     return (
@@ -25,15 +25,15 @@ class Sidebar extends React.Component {
                   <em className="fa fa-smile-o">NAV-ITEM</em>
                 </div>
                 {/* <Collapse in={ this.state.collapse.X } timeout= { 100 }> */}
-                  <ul className="nav sidebar-subnav">
-                    <li className="sidebar-subnav-header">SubNavHeader</li>
-                    <li className="active">
-                      <a href="#" title="EventNameBlah">Active Event Name</a>
-                    </li>
-                    <li className="">
-                      <a href="#" title="EventNameBlah">Event 2 Name</a>
-                    </li>
-                  </ul>
+                <ul className="nav sidebar-subnav">
+                  <li className="sidebar-subnav-header">SubNavHeader</li>
+                  <li className="active">
+                    <a href="#" title="EventNameBlah">Active Event Name</a>
+                  </li>
+                  <li className="">
+                    <a href="#" title="EventNameBlah">Event 2 Name</a>
+                  </li>
+                </ul>
                 {/* </Collapse> */}
               </li>
             </ul>

@@ -1,25 +1,31 @@
 import {chai} from 'meteor/practicalmeteor:chai';
 
 import {HytekEntries} from '../../imports/api/HytekEntries/HytekEntries';
+/**
+ * The following eslint diable lines (in comments) are need to get Mocha/Chai
+ * tests to work without esLint errors:
+***/
+/* eslint func-names: 0 */   // Off
+/* eslint no-unused-expressions: 0 */   // off
+/* eslint prefer-arrow-callback: 0 */ // off
 
 const expect = chai.expect;
 const FILEBASE = './test-data/';
 
-
-describe('Test HyTek Entries Module', function() {
+describe('Test HyTek Entries Module', function () {
   /** */
-  describe('HyTek File Not Found', function() {
-    it('Try to open a file that doesn\'t exist and fail', function() {
-      const htNewFunc = function() {
-        new HytekEntries('/non-existant/file');
+  describe('HyTek File Not Found', function () {
+    it('Try to open a file that doesn\'t exist and fail', function () {
+      const htNewFunc = function () {
+        const ht = new HytekEntries('/non-existant/file');
       };
       expect(htNewFunc).to.throw(/no such file or directory/);
     });
   });
 
-  describe('Parse \'I\' Records from File', function() {
-    it('Parses a file with one fully-filled, correct I record', function() {
-      const htE = new HytekEntries( FILEBASE + 'I-Line-Normal.txt');
+  describe('Parse \'I\' Records from File', function () {
+    it('Parses a file with one fully-filled, correct I record', function () {
+      const htE = new HytekEntries(`${FILEBASE} I-Line-Normal.txt`);
       expect(htE.athleteRecs).to.have.length(1);
       const ath = htE.athleteRecs[0];
       expect(ath.firstName).to.deep.equal('Tyrion');
@@ -47,9 +53,8 @@ describe('Test HyTek Entries Module', function() {
       expect(ath.disabledClassification).to.deep.equal('');
     });
 
-    it('Parses a very short I line with just minimum info', function() {
-      const htE = new HytekEntries(
-        FILEBASE + 'I-Line-Short.txt');
+    it('Parses a very short I line with just minimum info', function () {
+      const htE = new HytekEntries(`${FILEBASE} I-Line-Short.txt`);
       expect(htE.athleteRecs).to.have.length.above(0);
       const ath = htE.athleteRecs[0];
       expect(ath.firstName).to.deep.equal('Tyrion');
@@ -61,8 +66,8 @@ describe('Test HyTek Entries Module', function() {
       expect(ath.schoolYear).to.deep.equal('12');
     });
 
-    it('First Name too long, so record doesn\'t parse', function() {
-      const htE = new HytekEntries(FILEBASE + 'I-Line-TooLong-FirstName.txt');
+    it('First Name too long, so record doesn\'t parse', function () {
+      const htE = new HytekEntries(`${FILEBASE} I-Line-TooLong-FirstName.txt`);
       expect(htE).to.exist;
       expect(htE.warnings).to.have.length.above(0);
       expect(htE.athleteRecs).to.have.lengthOf(0);
@@ -70,8 +75,8 @@ describe('Test HyTek Entries Module', function() {
       expect(htE.relayEntries).to.have.lengthOf(0);
     });
 
-    it('Bad Gender, so record doesn\'t parse', function() {
-      const htE = new HytekEntries(FILEBASE + 'I-Line-Bad-Gender.txt');
+    it('Bad Gender, so record doesn\'t parse', function () {
+      const htE = new HytekEntries(`${FILEBASE} I-Line-Bad-Gender.txt`);
       expect(htE).to.exist;
       expect(htE.warnings).to.have.length.above(0);
       expect(htE.athleteRecs).to.have.lengthOf(0);
@@ -79,8 +84,8 @@ describe('Test HyTek Entries Module', function() {
       expect(htE.relayEntries).to.have.lengthOf(0);
     });
 
-    it('OK. Lowercase Gender, but Record Parses Anyway', function() {
-      const htE = new HytekEntries(FILEBASE + 'I-Line-Lowercase-Gender.txt');
+    it('OK. Lowercase Gender, but Record Parses Anyway', function () {
+      const htE = new HytekEntries(`${FILEBASE} I-Line-Lowercase-Gender.txt`);
       expect(htE).to.exist;
       expect(htE.warnings).to.have.lengthOf(0);
       expect(htE.athleteRecs).to.have.lengthOf(1);
@@ -88,8 +93,8 @@ describe('Test HyTek Entries Module', function() {
       expect(htE.relayEntries).to.have.lengthOf(0);
     });
 
-    it('Bad Country Code', function() {
-      const htE = new HytekEntries(FILEBASE + 'I-Line-Bad-CountryCode.txt');
+    it('Bad Country Code', function () {
+      const htE = new HytekEntries(`${FILEBASE} I-Line-Bad-CountryCode.txt`);
       expect(htE).to.exist;
       expect(htE.warnings).to.have.length.above(0);
       expect(htE.athleteRecs).to.have.lengthOf(0);
@@ -97,8 +102,8 @@ describe('Test HyTek Entries Module', function() {
       expect(htE.relayEntries).to.have.lengthOf(0);
     });
 
-    it('Too long gender (\'Male\')', function() {
-      const htE = new HytekEntries(FILEBASE + 'I-Line-TooLong-Gender.txt');
+    it('Too long gender (\'Male\')', function () {
+      const htE = new HytekEntries(`${FILEBASE} I-Line-TooLong-Gender.txt`);
       expect(htE).to.exist;
       expect(htE.warnings).to.have.length.above(0);
       expect(htE.athleteRecs).to.have.lengthOf(0);
@@ -106,8 +111,8 @@ describe('Test HyTek Entries Module', function() {
       expect(htE.relayEntries).to.have.lengthOf(0);
     });
 
-    it('Bad School Year (\'HI\')', function() {
-      const htE = new HytekEntries(FILEBASE + 'I-Line-Bad-Schoolyear.txt');
+    it('Bad School Year (\'HI\')', function () {
+      const htE = new HytekEntries(`${FILEBASE} I-Line-Bad-Schoolyear.txt`);
       expect(htE).to.exist;
       expect(htE.warnings).to.have.length.above(0);
       expect(htE.athleteRecs).to.have.lengthOf(0);
@@ -115,8 +120,8 @@ describe('Test HyTek Entries Module', function() {
       expect(htE.relayEntries).to.have.lengthOf(0);
     });
 
-    it('Bad School Year (\'14\')', function() {
-      const htE = new HytekEntries( FILEBASE + 'I-Line-Bad-Schoolyear2.txt');
+    it('Bad School Year (\'14\')', function () {
+      const htE = new HytekEntries(`${FILEBASE} I-Line-Bad-Schoolyear2.txt`);
       expect(htE).to.exist;
       expect(htE.warnings).to.have.length.above(0);
       expect(htE.athleteRecs).to.have.lengthOf(0);
@@ -124,8 +129,8 @@ describe('Test HyTek Entries Module', function() {
       expect(htE.relayEntries).to.have.lengthOf(0);
     });
 
-    it('Bad School Year (too long: \'junior\')', function() {
-      const htE = new HytekEntries(FILEBASE + 'I-Line-Bad-Schoolyear3.txt');
+    it('Bad School Year (too long: \'junior\')', function () {
+      const htE = new HytekEntries(`${FILEBASE} I-Line-Bad-Schoolyear3.txt`);
       expect(htE).to.exist;
       expect(htE.warnings).to.have.length.above(0);
       expect(htE.athleteRecs).to.have.lengthOf(0);
@@ -133,10 +138,8 @@ describe('Test HyTek Entries Module', function() {
       expect(htE.relayEntries).to.have.lengthOf(0);
     });
 
-    it('TODO: 2 duplicate I lines for one athlete', function() {
-      const htE = new HytekEntries(
-        FILEBASE +
-        'I-Line-Duplicate-Athlete.txt');
+    it('TODO: 2 duplicate I lines for one athlete', function () {
+      const htE = new HytekEntries(`${FILEBASE} I-Line-Duplicate-Athlete.txt`);
       expect(htE).to.exist;
       expect(htE.warnings).to.have.length.above(0);
       expect(htE.athleteRecs).to.have.lengthOf(1);
@@ -144,33 +147,30 @@ describe('Test HyTek Entries Module', function() {
       expect(htE.relayEntries).to.have.lengthOf(0);
     });
 
-    it('2 non-duplicate but equivalent I lines for one athlete',
-      function() {
-        const htE = new HytekEntries(FILEBASE +
-            'I-Line-Double-Athlete.txt');
-        expect(htE).to.exist;
-        expect(htE.warnings).to.have.length.above(0);
-        expect(htE.athleteRecs).to.have.lengthOf(1);
-        expect(htE.indivEntries).to.have.lengthOf(0);
-        expect(htE.relayEntries).to.have.lengthOf(0);
-      }
-    );
+    it('2 non-duplicate but equivalent I lines for one athlete', function () {
+      const htE = new HytekEntries(`${FILEBASE} I-Line-Double-Athlete.txt`);
+      expect(htE).to.exist;
+      expect(htE.warnings).to.have.length.above(0);
+      expect(htE.athleteRecs).to.have.lengthOf(1);
+      expect(htE.indivEntries).to.have.lengthOf(0);
+      expect(htE.relayEntries).to.have.lengthOf(0);
+    });
 
-    it('TODO: 2 I-line entries for same athlete, but one has too many' +
-         'fields missing. Should warn but continue.', function() {
-      const htE = new HytekEntries(
-        FILEBASE + '/I-Line-Double-Athlete-NotDetected.txt');
+    it('TODO: 2 I-line entries for same athlete, but one has too manyfields mi' +
+        'ssing. Should warn but continue.',
+    function () {
+      const htE = new HytekEntries(`${FILEBASE} /I-Line-Double-Athlete-NotDetected.txt`);
       expect(htE).to.exist;
       expect(htE.warnings).to.have.length.above(0);
       expect(htE.athleteRecs).to.have.lengthOf(2);
       expect(htE.indivEntries).to.have.lengthOf(0);
       expect(htE.relayEntries).to.have.lengthOf(0);
     });
-  });  // end I-Line
+  }); // end I-Line
 
-  describe('Parse \'D\' Records from File', function() {
-    it('Parses a file with one fully-filled, correct D record', function() {
-      const htE = new HytekEntries(FILEBASE + 'D-Line-Normal.txt');
+  describe('Parse \'D\' Records from File', function () {
+    it('Parses a file with one fully-filled, correct D record', function () {
+      const htE = new HytekEntries(`${FILEBASE} D-Line-Normal.txt`);
       expect(htE.indivEntries).to.have.length(1);
       const iEnt = htE.indivEntries[0];
       expect(iEnt.firstName).to.deep.equal('Cersei');
@@ -187,8 +187,8 @@ describe('Test HyTek Entries Module', function() {
       expect(iEnt.divisionNum).to.equal('1');
     });
 
-    it('Duplicate D lines', function() {
-      const htE = new HytekEntries(FILEBASE + 'D-Line-Duplicate-Entry.txt');
+    it('Duplicate D lines', function () {
+      const htE = new HytekEntries(`${FILEBASE} D-Line-Duplicate-Entry.txt`);
       expect(htE.indivEntries).to.have.length(1);
       expect(htE.warnings).to.have.length.above(0);
       const iEnt = htE.indivEntries[0];
@@ -206,19 +206,19 @@ describe('Test HyTek Entries Module', function() {
       expect(iEnt.divisionNum).to.equal('1');
     });
 
-    it('Bad Event D line', function() {
-      const htE = new HytekEntries(FILEBASE + 'D-Line-Bad-Event.txt');
+    it('Bad Event D line', function () {
+      const htE = new HytekEntries(`${FILEBASE} D-Line-Bad-Event.txt`);
       expect(htE).to.exist;
       expect(htE.warnings).to.have.length.above(0);
       expect(htE.athleteRecs).to.have.lengthOf(0);
       expect(htE.indivEntries).to.have.lengthOf(0);
       expect(htE.relayEntries).to.have.lengthOf(0);
     });
-  });  // end D Line
+  }); // end D Line
 
-  describe('Parse \'E\' Records from File', function() {
-    it('Parses a file with one fully-filled, correct E record', function() {
-      const htE = new HytekEntries(FILEBASE + 'E-Line-Normal.txt');
+  describe('Parse \'E\' Records from File', function () {
+    it('Parses a file with one fully-filled, correct E record', function () {
+      const htE = new HytekEntries(`${FILEBASE} E-Line-Normal.txt`);
       expect(htE.indivEntries).to.have.length(1);
       const iEnt = htE.indivEntries[0];
       expect(iEnt.firstName).to.deep.equal('Cersei');
@@ -235,66 +235,65 @@ describe('Test HyTek Entries Module', function() {
       expect(iEnt.divisionNum).to.equal('1');
     });
 
-    it('Bad Event E line', function() {
-      const htE = new HytekEntries(FILEBASE + 'E-Line-Bad-Event.txt');
+    it('Bad Event E line', function () {
+      const htE = new HytekEntries(`${FILEBASE} E-Line-Bad-Event.txt`);
       expect(htE).to.exist;
       expect(htE.warnings).to.have.length.above(0);
       expect(htE.athleteRecs).to.have.lengthOf(0);
       expect(htE.indivEntries).to.have.lengthOf(0);
       expect(htE.relayEntries).to.have.lengthOf(0);
     });
-  });  // end E line
+  }); // end E line
 
+  describe('Parse \'Q\' Relay Records from File', function () {
+    it('Parses a file with one fully-filled, correct Q record, for a relay tea' +
+        'm entry',
+    function () {
+      const htE = new HytekEntries(`${FILEBASE} Q-Line-Normal.txt`);
+      const qEntry = htE.relayEntries[0];
+      expect(htE.relayEntries).to.have.length(1);
+      expect(qEntry.institutionCode).to.deep.equal('TSV');
+      expect(qEntry.institutionName).to.deep.equal('Team Silicon Valley');
+      expect(qEntry.relayLetter).to.deep.equal('A');
+      expect(qEntry.relayGender).to.deep.equal('M');
+      expect(qEntry.relayAge).to.deep.equal('');
+      expect(qEntry.eventCode).to.deep.equal('4x100');
+      expect(qEntry.mark).to.equal('52.39');
+      expect(qEntry.measureSys).to.deep.equal('M');
+      expect(qEntry.divisionNum).to.deep.equal('1');
+      expect(qEntry.priorRoundFinishPlace).to.deep.equal('2');
+      expect(qEntry.declarationStatus).to.deep.equal('D');
+      expect(qEntry.entryNote).to.equal('This is an entry note');
 
-  describe('Parse \'Q\' Relay Records from File', function() {
-    it('Parses a file with one fully-filled, correct Q record,' +
-      ' for a relay team entry', function() {
-        const htE = new HytekEntries(FILEBASE + 'Q-Line-Normal.txt');
-        const qEntry = htE.relayEntries[0];
-        expect(htE.relayEntries).to.have.length(1);
-        expect(qEntry.institutionCode).to.deep.equal('TSV');
-        expect(qEntry.institutionName).to.deep.equal('Team Silicon Valley');
-        expect(qEntry.relayLetter).to.deep.equal('A');
-        expect(qEntry.relayGender).to.deep.equal('M');
-        expect(qEntry.relayAge).to.deep.equal('');
-        expect(qEntry.eventCode).to.deep.equal('4x100');
-        expect(qEntry.mark).to.equal('52.39');
-        expect(qEntry.measureSys).to.deep.equal('M');
-        expect(qEntry.divisionNum).to.deep.equal('1');
-        expect(qEntry.priorRoundFinishPlace).to.deep.equal('2');
-        expect(qEntry.declarationStatus).to.deep.equal('D');
-        expect(qEntry.entryNote).to.equal('This is an entry note');
+      expect(qEntry.runners).to.have.lengthOf(6);
+      expect(qEntry.runners[0].firstName).to.equal('Richard');
+      expect(qEntry.runners[0].competitorNum).to.exist;
+      expect(qEntry.runners[1].firstName).to.equal('Erlich');
+      expect(qEntry.runners[1].competitorNum).to.exist;
+      expect(qEntry.runners[2].firstName).to.equal('Jared');
+      expect(qEntry.runners[2].competitorNum).to.exist;
+      expect(qEntry.runners[3].firstName).to.equal('Dinesh');
+      expect(qEntry.runners[3].competitorNum).to.exist;
+      expect(qEntry.runners[4].firstName).to.equal('Bertram');
+      expect(qEntry.runners[4].competitorNum).to.exist;
+      expect(qEntry.runners[5].firstName).to.equal('Big Head');
+      expect(qEntry.runners[5].competitorNum).to.exist;
+    },
+  );
 
-        expect(qEntry.runners).to.have.lengthOf(6);
-        expect(qEntry.runners[0].firstName).to.equal('Richard');
-        expect(qEntry.runners[0].competitorNum).to.exist;
-        expect(qEntry.runners[1].firstName).to.equal('Erlich');
-        expect(qEntry.runners[1].competitorNum).to.exist;
-        expect(qEntry.runners[2].firstName).to.equal('Jared');
-        expect(qEntry.runners[2].competitorNum).to.exist;
-        expect(qEntry.runners[3].firstName).to.equal('Dinesh');
-        expect(qEntry.runners[3].competitorNum).to.exist;
-        expect(qEntry.runners[4].firstName).to.equal('Bertram');
-        expect(qEntry.runners[4].competitorNum).to.exist;
-        expect(qEntry.runners[5].firstName).to.equal('Big Head');
-        expect(qEntry.runners[5].competitorNum).to.exist;
-      }
-    );
-
-    it('Bad Event Q line', function() {
-      const htE = new HytekEntries(FILEBASE + 'Q-Line-Bad-Event.txt');
+    it('Bad Event Q line', function () {
+      const htE = new HytekEntries(`${FILEBASE} Q-Line-Bad-Event.txt`);
       expect(htE).to.exist;
       expect(htE.warnings).to.have.length.above(0);
       expect(htE.athleteRecs).to.have.lengthOf(0);
       expect(htE.indivEntries).to.have.lengthOf(0);
       expect(htE.relayEntries).to.have.lengthOf(0);
     });
-  });  // end Qline Tests
+  }); // end Qline Tests
 
-
-  describe('Parse \'R\' Relay Records from File', function() {
-    it('One fully-filled R (relay) entry parses correctly', function() {
-      const htE = new HytekEntries(FILEBASE + 'R-Line-Normal.txt');
+  describe('Parse \'R\' Relay Records from File', function () {
+    it('One fully-filled R (relay) entry parses correctly', function () {
+      const htE = new HytekEntries(`${FILEBASE} R-Line-Normal.txt`);
       const rEntry = htE.relayEntries[0];
       expect(htE.relayEntries).to.have.length(1);
       expect(rEntry.institutionCode).to.deep.equal('TSV');
@@ -316,8 +315,8 @@ describe('Test HyTek Entries Module', function() {
       expect(rEntry.runners[0].competitorNum).to.not.exist;
     });
 
-    it('Bad Event R line', function() {
-      const htE = new HytekEntries(FILEBASE + 'R-Line-Bad-Event.txt');
+    it('Bad Event R line', function () {
+      const htE = new HytekEntries(`${FILEBASE} R-Line-Bad-Event.txt`);
       expect(htE).to.exist;
       expect(htE.warnings).to.have.length.above(0);
       expect(htE.athleteRecs).to.have.lengthOf(0);

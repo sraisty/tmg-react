@@ -30,6 +30,7 @@
   },
   "devDependencies": {
     "babel-eslint": "^7.2.1",
+    "enzyme": "^2.8.0",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^14.1.0",
     "eslint-import-resolver-meteor": "^0.3.4",
@@ -70,11 +71,11 @@
       "import/resolver": "meteor"
     },
     "extends": [
-      "plugin:mocha/recommended",
       "eslint:recommended",
-      "plugin:meteor/recommended",
       "plugin:react/recommended",
-      "airbnb"
+      "airbnb",
+      "plugin:mocha/recommended",
+      "plugin:meteor/recommended"
     ],
     "rules": {
       "no-invalid-this": "warn",
@@ -86,34 +87,59 @@
         "error",
         "never"
       ],
-      "indent": ["error", 2],
+      "indent": [
+        "error",
+        2,
+        { "SwitchCase": 1 }
+      ],
       "comma-dangle": [
         "error",
         {
           "arrays": "always-multiline",
           "objects": "always-multiline",
           "imports": "always-multiline",
-          "exports": "always-multiline",
-          "functions": "always-multiline"
+          "exports": "always-multiline"
         }
       ],
-      "no-mocha-arrows": "error",
-      "indent": [
-          "error",
-          4
-      ],
+      "mocha/no-global-tests": "error",
+      "mocha/no-mocha-arrows": "error",
+      "mocha/no-exclusive-tests": "error",
+      "mocha/handle-done-callback": "error",
+      "mocha/no-identical-title": "error",
+      "mocha/no-nested-tests": "error",
       "linebreak-style": [
-          "error",
-          "unix"
+        "error",
+        "unix"
       ],
       "quotes": [
-          "error",
-          "single"
+        "error",
+        "single"
       ],
       "semi": [
-          "error",
-          "always"
-      ]
+        "error",
+        "always"
+      ],
+     "import/extensions": ["off", "never"],
+     "react/jsx-filename-extension": [
+       1,
+       {
+         "extensions": [
+           ".js",
+           ".jsx"
+         ]
+       }
+     ],
+     "no-underscore-dangle": [
+       "error",
+       {
+         "allow": [
+           "_id"
+         ]
+       }
+     ],
+     "import/no-extraneous-dependencies": 0,
+     "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+     "no-use-before-define": ["error", { "functions": false}]
     }
   }
 }

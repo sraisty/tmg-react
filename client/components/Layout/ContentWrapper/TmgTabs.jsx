@@ -1,5 +1,5 @@
 import React from 'react';
-import { Tab, Nav, NavItem} from 'react-bootstrap';
+import {Tab, Nav, NavItem} from 'react-bootstrap';
 
 import MeetEvents from '../../MeetEvents/index.jsx';
 import Teams from '../../Teams/index.jsx';
@@ -7,7 +7,6 @@ import Athletes from '../../Athletes/index.jsx';
 import Scores from '../../Scores/index.jsx';
 import MeetInfo from '../../MeetInfo/index.jsx';
 import MeetAdmin from '../../MeetAdmin/index.jsx';
-
 
 
 class TmgTabs extends React.Component {
@@ -23,7 +22,7 @@ class TmgTabs extends React.Component {
   // },
 
   handleSelect(e) {
-    alert('selected ' + e);
+    alert(`selected ${e}`);
     this.setState({key: e});
   }
 
@@ -37,7 +36,8 @@ class TmgTabs extends React.Component {
             <NavItem eventKey="athletes">Athletes</NavItem>
             <NavItem eventKey="scores">Scores</NavItem>
             <NavItem eventKey="meetadmin">
-              <em className="fa fa-cog"></em>&nbsp;Meet Admin
+              <em className="fa fa-cog"></em>
+              &nbsp;Meet Admin
             </NavItem>
           </Nav>
 

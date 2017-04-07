@@ -40,7 +40,7 @@ class Athlete {
     if (params.gender) {
       this.gender = params.gender.toUpperCase();
     } else {
-        throw new Error('ERROR new Athlete(): missing gender');
+      throw new Error('ERROR new Athlete(): missing gender');
     }
 
     // Not everyone has a middle initial, so if undefined set it to ''
@@ -51,7 +51,7 @@ class Athlete {
 
     // If no division is supplied, default to the Varsity Division
     this.divisionName = params.divisionName || DEFAULT_DIVISION;
-    console.log('DEFAULT_DIVISION is ' + DEFAULT_DIVISION);
+    console.log(`DEFAULT_DIVISION is ${DEFAULT_DIVISION}`);
 
     // schoolyear = 1,2,3,4,5,6,7,8,9,10,11,12, FR, SO, JR, SR
     // schoolyear is not required. Let it remain undefined if necessary.
@@ -93,12 +93,12 @@ class Athlete {
 
       if (p.middleInitial.toUpperCase() !== this.middleInitial.toUpperCase()) {
         // TODO - warn that the middle Intitals don't match
-        warning = warning + ': middle Initial';
+        warning += ': middle Initial';
         return {ok: false, warning};
       }
       if (p.gender !== this.gender.toUpperCase()) {
         // TODO - warn that the genders don't match
-        warning = warning + ': gender';
+        warning += ': gender';
         return {ok: false, warning};
       }
       if (p.institutionName.toUpperCase() !==
@@ -113,13 +113,13 @@ class Athlete {
       // Remember schoolYear can be letters. ex: 'FR', 'SO', ...
       if (!p.schoolYear && !this.schoolYear) {
           // neither athlete had schoolYear defined
-          warning = '';
-          return {ok: true, warning};
+        warning = '';
+        return {ok: true, warning};
       }
       if (p.schoolYear && this.schoolYear &&
-          (p.schoolYear.toUpperCase() === this.schoolYear.toUpperCase())) {
-            warning = '';
-            return {ok: true, warning};
+        (p.schoolYear.toUpperCase() === this.schoolYear.toUpperCase())) {
+        warning = '';
+        return {ok: true, warning};
       }
     }
     warning = 'Athletes do not match';

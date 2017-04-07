@@ -2,10 +2,10 @@ import React from 'react';
 import {Row, Col, Panel, Table} from 'react-bootstrap';
 import ReactTable from 'react-table';
 
-import DummyText from '../DevUtils/DummyText';
+import DummyText from '../DevUtils/DummyText'
+
 
 class Athletes extends React.Component {
-
   render() {
     return (
       <Row>
@@ -59,7 +59,7 @@ class Athletes extends React.Component {
           <Panel>
 
             <h4>ATHLETES</h4>
-            <DummyText numParagraphs="4"/>
+            <DummyText numParagraphs="4" />
           </Panel>
         </Col>
       </Row>

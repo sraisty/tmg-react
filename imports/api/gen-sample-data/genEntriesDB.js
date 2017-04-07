@@ -1,58 +1,59 @@
 /*
 *
-*
-* Make sure to meteor npm install faker
+* Generate fake meet, athlete, and entry data for testing purposes.
 */
+
 import faker from 'faker';
+import {log} from 'meteor/practicalmeteor:loglevel';
+
+const TestDataAthletes = new Mongo.Collection('testAthletes');
+const TestDataEventEntries = new Mongo.Collection('testEventEntries');
 
 function generateRoster() {
   if (Meteor.server) {
-    const TestDataAthletes = new Mongo.Collection('testAthletes');
-    const TestDataEventEntries = new Mongo.Collection('testEventEntries');
+    let newAthlete;
 
     for (let i = 0; i < 100; i++) {
-      let lastn = faker.name.lastName();
-      let firstn = faker.name.firstName();
-      let tfrrs_id = '';
-      // Test athletes try to enter between 0 & 5 events
-      let athleteNumEvents = Math.round(Math.random() * 5);
-      let gender = faker.random.arrayElement(['m', 'f',]);
-      let division = '';
+      newAthlete = {
+        lastName: faker.name.lastName(),
+        firstName: faker.name.firstName(),
+        gender: faker.random.arrayElement(['m', 'f']),
+        schoolYear: faker.random.arrayElement(['9', '10', '11', '12']),
+        division: '',
+        numEvents: faker.random.number.between(0, 5),
+      };
 
       // One out of 7 people don't have middle initials
-      let middle = (i % 7 != 0)
+      newAthlete.middle = (i % 7 !== 0)
         ? faker.random.word().substr(0, 1).toUpperCase()
-        : '*';
+        : '*'; // TFRRS uses * char if the athlete does't have a middle name
 
-      tfrrs_id = faker.random.number({min: 100000, max: 999999,})
-          + firstn.substring(0, 3).toUpperCase()
-          + middle
-          + lastn.substring(0, 4).toUpperCase();
+      newAthlete.tfrrsId =
+        faker.random.number({min: 100000, max: 999999})
+        + newAthlete.firstn.substring(0, 3).toUpperCase()
+        + newAthlete.middle + newAthlete.lastn.substring(0, 4).toUpperCase();
 
-      TestDataAthletes.insert({
-        tfrrsID: tfrrs_id,
-        firstName: firstn,
-        lastName: lastn,
-        middleName: middle.toUpperCase(),
-        gender: gender,
-        year: faker.random.arrayElement(['9', '10', '11', '12',]),
-        numEvents: athleteNumEvents,
-      });
+      TestDataAthletes.insert(newAthlete);
+    }
 
+    for (let j = 0; j < faker.random.number.between(0, 5); j++) {
       // let each athlete try to enter between 0 and 5 events
-      for (let i = 0; i < faker.random.number.between(0, 5); i++) {
-        TestDataEventEntries.insert({
-          tfrrsID: tfrrs_id,
-          eventCode: faker.random.arrayElement(validEventCodes),
-          gender: gender,
-          division: division,
-          seedMark: '',
-        });
-      }
+      const newEventEntry = {
+        tfrrsId: newAthlete.tfrrsId,
+        eventCode: faker.random.arrayElement(validEventCodes),
+        gender: newAthlete.gender,
+        division: newAthlete.division,
+        seedMark: '',
+      };
+
+      TestDataEventEntries.insert(newEventEntry);
     }
   }
 
   console.log(TestDataAthletes.find().fetch());
-  let numWomen = TestDataAthletes.find({gender: 'f'}).count();
-  let numMen = TestDataAthletes.find({gender: 'm'}).count();
+  const numWomen = TestDataAthletes.find({gender: 'f'}).count();
+  const numMen = TestDataAthletes.find({gender: 'm'}).count();
   console.log(numWomen, 'women and ', numMen, 'men.');
+}
+
+export default generateRoster;
