@@ -50,8 +50,8 @@ COUNTRY RECORDS
   &rtype=country&region=can
 ****************/
 
-import {HTTP} from 'meteor/http';
-import MEETEVENT_CONSTANTS from '/lib/meetEventConstants.com';
+import { HTTP } from 'meteor/http';
+import MEETEVENT_CONSTANTS from '../../lib/meetEventConstants';
 
 const ALL_ATHLETICS_BASE_URL = 'http://www.allathletics.com/en-us/all-time-lists?';
 
@@ -65,7 +65,7 @@ const ALL_ATHLETICS_BASE_URL = 'http://www.allathletics.com/en-us/all-time-lists
 function allAthleticsQueryObj(aa) {
   const meetEventObj = MEETEVENT_CONSTANTS[aa.tmgEventCode];
   let aaCodeSelector;
-  let queryParamObj = {};
+  const queryParamObj = {};
 
   if (aa.indoor) {
     queryParamObj.env = 'I';
@@ -105,7 +105,7 @@ function getTfRecordViaAPI(aa) {
   HTTP.call(
     'GET',
     ALL_ATHLETICS_BASE_URL,
-    {params: queryOptionObj},
+    { params: queryOptionObj },
     procHttpCallback,
   );
 }

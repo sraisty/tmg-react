@@ -43,7 +43,7 @@ class HytekEntries {
       // record is one line within the source file
       const record = records[i];
 
-      const {line, recordType} = this.parseHtLine(record);
+      const { line, recordType } = this.parseHtLine(record);
       if (!line) {
         console.log('Skipping bad line');
         this.warnings.push(
@@ -133,14 +133,14 @@ class HytekEntries {
         // empty line. Just return
         this.warnings.push('Skipping empty line.');
         recordType = 'emptyLine';
-        return {ok: false, recordType};
+        return { ok: false, recordType };
       }
       default: {
         throw new Error(`FILE FORMAT ERROR: Bad Line Type: ${recordType}`);
       }
     }
 
-    let line = {};
+    const line = {};
     // i=1 because data starts in second field of line
     for (let i = 1; i < numFieldsToParse; i++) {
       const fieldDef = lineFieldDefs[i];
@@ -153,7 +153,7 @@ class HytekEntries {
           Field: ${fieldDef.key}.
           Value: ${fieldValue}.
           RecordType: ${recordType}`);
-        return {ok: false, recordType};
+        return { ok: false, recordType };
       }
       if (fieldDef.allcaps) {
         fieldValue = fieldValue.toUpperCase();
@@ -168,7 +168,7 @@ class HytekEntries {
         throw new Error(`PARSE ERROR on a Relay Line: ${ok}`);
       }
     }
-    return {line, recordType};
+    return { line, recordType };
   }  // parseHtFile
 
   /**
@@ -221,7 +221,7 @@ class HytekEntries {
     if ((fieldDef.valid) && (fieldValue) &&
        !(fieldDef.valid.includes(fieldValue.toUpperCase()))) {
       this.warnings.push(`FILE PARSE ERROR: illegal values.
-        field ${fieldDef.key} value ${fieldValue}`
+        field ${fieldDef.key} value ${fieldValue}`,
       );
       return false;
     }
@@ -249,7 +249,7 @@ class HytekEntries {
     let runnerNumber = 0;
     while (runnerIndexInRecord < record.length) {
       // object containing the fields outlined in RelayRunnerFieldDefs
-      let runner = {};
+      const runner = {};
 
       for (let i = 0; i < fieldsPerRunner; i++) {
         const fieldDef = hytek.RelayRunnerFieldDefs[i];
@@ -271,7 +271,7 @@ class HytekEntries {
     if (!this.convertHytekRelayCodes(line)) {
       this.warnings.push(
         `ERROR - Skipping Line due to unknown Hytek relay eventCode
-          ${line.eventCode}, Line: ${line}`
+          ${line.eventCode}, Line: ${line}`,
       );
       return false;
     }

@@ -16,6 +16,6 @@ const Base = () => {
       <Footer />
     </div>
   );
-}
+};
 
 export default Base;

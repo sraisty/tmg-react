@@ -1,9 +1,9 @@
-import {field, track, hurdles, relays, indivs, outdoor, indoor, throws,
+import { field, track, hurdles, relays, indivs, outdoor, indoor, throws,
   vertJumps, horzJumps, female, male, noFemales, noMales,
-  indoorTrack, outdoorTrack, indoorField, outdoorField, evCodes, evNames}
-  from '/imports/api/meetEventUtils.js';
+  indoorTrack, outdoorTrack, indoorField, outdoorField, evCodes, evNames }
+  from '../../imports/api/meetEventUtils';
 
-import MEETEVENT_CONSTANTS from './meetEventConstants';
+import MEETEVENT_CONSTANTS from '../../lib/meetEventConstants';
 
   /** ***** TEST ********/
 

@@ -2,7 +2,14 @@
 An track meet management application by Sue Raisty of SportSimplicity, Inc.
 
 ## About this Application
-* Based on Meteor with React for the front-end.  Javascript and Node.js are the basis and ES6 variation of Javascript is heavily used throughout.
+* Based on Meteor framework. 
+	* React.js for the front-end.  
+	* Node.js and MongoDB on the backend.
+* 100% Javascript, primarily the ES6 variant of Javascript.
+* Currently a hybrid application, but down the road hope to do Native iOS and Android 
+apps via Meteor's Cordova integration (with Iconic or React Native for the UI design).
+* Aiming toward a solution that can operate with spotty connectivity, but this is primarily a CONNECTED solution because the cloud enables sharing and mobility, our application's CORE VALUE.
+
 
 ### Meteor
   * MongoDB is the server-side database, and Meteor provides miniMongo as
@@ -23,7 +30,19 @@ An track meet management application by Sue Raisty of SportSimplicity, Inc.
 few track & field specific icons from [flaticon](http://flaticon.com).
 
 ### Core
-* [Lodash](http://lodash.com) library functions is used for a lot of object and array manipulation 
+* Prefer using [Lodash](http://lodash.com) library functions for object and array manipulation 
+
+#### Error Handling
+* This article outlines some good principles: [*Best Practices for Error Handling in Node.js*](http://goldbergyoni.com/checklist-best-practices-of-node-js-error-handling/)
+* This one too: https://www.joyent.com/node-js/production/design/errors
+* Handling errors: use the standard Node.js Error object.
+	* GOOD throw from typical function (sync or async)
+	
+			if (!productToAdd) {
+				throw new Error('Cannot add a new product when no value is provided.');
+			}
+
+
 
 ## NPM & Meteor Packages
 * Meteor Packages used are listed in the ./.meteor/packages directory
@@ -31,10 +50,12 @@ few track & field specific icons from [flaticon](http://flaticon.com).
 
 
 * When adding new NPM packages either do:
-	> $ meteor npm install <PACKAGENAME> --save   
+
+		$ meteor npm install <PACKAGENAME> --save   
 	
 	OR 
-  > $ meteor npm install <PACKAGENAME> --save-dev  
+
+		$ meteor npm install <PACKAGENAME> --save-dev  
   
   (Note that --save or -save-dev add entries into our ~./package.json file)
 
@@ -58,18 +79,70 @@ If things go weird:
   * THEN, For each of the packages listed in ./SAVEME_METEOR_PACKAGES file, 
   
 
-	$ meteor add PACKAGENAME
+		$ meteor add PACKAGENAME
 
 
 ## React
 
 
+## Testing
 
-## Tests
-* Tests must go into the /client/test and /server/test directory.  
-(NOT 'tests' plural, despite Meteor documentation).
+Mocha and the practicalmeteor:mocha package are the basis of our testing framework.
+
+### Using Mocha
+* Don't use arrow functions. Use the eslint mocha plugin to override the usual AirBnb rule that demands arrow functions.
+
+* Use the chai library for assertions, TDD, BDD.  
+* At top of test files:
+
+		import { expect } from 'meteor/practicalmeteor:chai';
+		
+* ...then create test files that use "desribe" & "it" to describe the test and 
+"expect" to test whether the results of the test were what they should have been.
+
+* TODO - Provide a better example.
 
 
+
+### Javascript Unit Tests
+1. In general, create one test file containing all the unit tests for each real code file.  A file called 'foo.js' will have a test file called 'foo.test.js'
+
+2. Put the unit test files in the <PROJECTDIR>/src/client/test and/or <PROJECTDIR>/src/server/test directories.  
+(NOT 'tests' plural, despite Meteor documentation to use a directory called 'tests').
+
+
+3. Start up meteor in unit test mode, along with running the main application in a separate process.  
+
+		$ # This will execute all your `*.test[s].*` files.
+  	  	$ meteor test --driver-package=practicalmeteor:mocha --port 3100
+  	  	$ meteor --port 3000
+  	  	
+   OR, since I added some scripts to the package.json file:	
+
+		$ meteor npm run debug
+
+5.  Open up two browser windows to see the app in action, while ensuring that unit tests don't break:
+  *  [http://localhost:3000](http://localhost:3000) for the regular app
+  *  [http://localhost:3100](http://localhost:3100) for the test results displayed in the browser.  Note that reloading this browser window will re-run the tests.
+
+### Integration Tests
+
+1. Create 
+
+		# This will execute all your *.app-test[s].* and *.app-spec[s].* files.
+		$ meteor test --full-app --driver-package=practicalmeteor:mocha
+
+### Testing React Components
+* Use the npm "[Enzyme](https://github.com/airbnb/enzyme)" package, which simulates a React component environment and lets you query it using CSS selectors.
+* At top of test files that use enzyme:
+
+		import React from 'react';
+		import {expect} from 'chai'; 
+			(or is it 
+			import {expect} from 'meteor/practicalmeteor:chai';
+			???)
+		import { mount, shallow } from 'enzyme';
+		
 
 ## Eslint & Atom Editor
 * All the rules I use for this are in the package.json file.  
@@ -77,10 +150,89 @@ If things go weird:
 * eslint runs automatically within the Atom editor that I use.
 *  From command line: 
 
-	> $   ./eslint-local  .
+       	$ meteor npm run lint
+       	
+	or
+
+		$ ./eslint-local .
+		
+* In our test files, we need to turn off certain eslint rules.  Insert this at the 
+TOP of any XXXX.test.js files.  Note that these are not your ordinary comments and can't
+be erased!  eslint reads them!
+	
+		// Selectively turn of eslint rules so Chai tests don't complain
+		//
+		/* eslint func-names: 0            */   // Off
+		/* eslint no-unused-expressions: 0 */   // Off
+		/* eslint no-unused-vars: 0        */   // Off
+		/* eslint prefer-arrow-callback: 0 */   // Off
+		
+       	
+* If I want to selectively turn off a particular eslint rule for just a PART of a file, then surround the offending code with eslint comment-commands:
+
+			/* eslint no-unused-vars: 0  */   		// 0 = Rule Off
+			
+			<THE OFFENDING CODE IS HERE>
+			
+			/* eslint no-unused-vars: 2  */  		// 2 = Rule triggers Error
+	
+
+		
+
 
 ## Git
 * The remote repository is on Bitbucket.
 * The git repository is in PROJECTDIR/src/.git  (NOT the level above, due to 
 problems with Heroku deployment)
-* 
+* To checkin from the commandline:
+	
+		$ git add .
+		$ git commit -m "my commit message"
+		$ git status
+		
+
+* To push to the remote BitBucket:
+
+		$ git 
+	
+
+## Heroku
+
+* Find the application at [https://tmg-react.herokuapp.com/](https://tmg-react.herokuapp.com/)
+
+	* NOTE: no port 3000 is necessary.
+
+* Our dev environment is deployed for free on Heroku, for a little while at least. It has access to 1 “dyno” with 512MB for free.
+
+* I set it up using [these instructions](https://www.coshx.com/blog/2016/08/19/how-to-deploy-a-meteor-1-4-app-to-heroku/), using the recommended Horse Buildpack:
+
+
+### Troubleshooting Heroku
+If the app is not up, do this:
+
+	$ heroku logs
+  
+Try restarting the application. First, arrange to see a real-time display of new input to the logs:
+
+
+    $ heroku restart
+    $ heroku logs --tail
+    
+    (Later, do Control-C to return to the terminal window's usual prompt)
+    
+And to then open up the app in a browser window:
+
+    $ heroku open  
+    
+
+# Futures
+
+### Functionality to Add
+* Logging and erorr handling using the **practicalmeteor:loglevel** package.
+
+### Ongoing Application Monitor
+
+* [UpTimeRobot.Com](http://uptimerobot.com)
+* [AppDynamic.Com](http://AppDynamic.Com)
+
+

@@ -2,17 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import log from 'meteor/practicalmeteor:loglevel';
 
-import Base from './components/Layout/Base';
-
-import '../imports/styles/font-awesome.min.css';
-
-// import '../imports/styles/bootstrap.scss';
-// import '../imports/styles/app.scss';
-// import '../imports/styles/themes/theme-g.scss';
-import '../imports/styles/default-bootstrap/bootstrap.css';
-import '../imports/styles/default-bootstrap/bootstrap-theme.css';
-import '../imports/styles/tmg_bootstrap.css';
-// import '../imports/styles/app/utils.scss';
+import Base from '/client/components/Layout/Base';
 
 
 const App = () => {

@@ -19,10 +19,15 @@ shell-server@0.2.3            # Server-side component of the `meteor shell` comm
 
 autopublish@1.0.7             # Publish all data to the clients (for prototyping)
 insecure@1.0.7                # Allow all DB writes from clients (for prototyping)
-http
+
 aldeed:simple-schema
-check
 aldeed:collection2
-practicalmeteor:mocha
-practicalmeteor:loglevel
+check
+
 reywood:publish-composite
+
+practicalmeteor:loglevel
+practicalmeteor:chai
+practicalmeteor:mocha
+http
+less

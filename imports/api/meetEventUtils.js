@@ -6,9 +6,9 @@
  *
 */
 
-import {pickBy, map} from 'lodash';
+import { pickBy, map } from 'lodash';
 
-import MEETEVENT_CONSTANTS from '/lib/meetEventConstants.js';
+import MEETEVENT_CONSTANTS from '../../lib/meetEventConstants';
 
 function filterMeetEvents(selectFunc, oldEv = MEETEVENT_CONSTANTS) {
   return pickBy(oldEv, selectFunc);
@@ -87,6 +87,33 @@ function outdoorField(evObj) {
   return outdoor(field(evObj));
 }
 
+/**
+ * @return {boolen} - returns true if this Entry's event is a Field Event
+ * such as the shot put or high jump.
+ */
+function isFieldEvent(eventCode) {
+  // return tf.VALID_FIELD_EVENTS.includes(eventCode);
+  // TODO
+}
+
+/**
+ * @return {boolen} - returns true if this Entry's event is a Track Event
+ * such as the 100, 1500, 10000, or 4x100.
+ */
+function isTrackEvent(eventCode) {
+  // return tf.VALID_TRACK_EVENTS.includes(eventCode);
+  // TODO
+}
+
+/**
+ * @return {boolen} - returns true if this Entry's event is a Relay
+ * Track Event such as the Distance Medley or  4x100.
+ */
+function isRelayEvent(eventCode) {
+  // TODO
+}
+
+
 /** *** UTILITIES ******/
 
 function evCodes(evObj) {
@@ -98,8 +125,7 @@ function evNames(evObj) {
 }
 
 
-
-
-export {field, track, hurdles, relays, indivs, outdoor, indoor, throws,
+export { field, track, hurdles, relays, indivs, outdoor, indoor, throws,
   vertJumps, horzJumps, female, male, noFemales, noMales,
-  indoorTrack, outdoorTrack, indoorField, outdoorField, evCodes, evNames};
+  indoorTrack, outdoorTrack, indoorField, outdoorField,
+  isTrackEvent, isFieldEvent, isRelayEvent, evCodes, evNames };

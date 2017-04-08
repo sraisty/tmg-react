@@ -12,7 +12,8 @@
     "start": "meteor run",
     "lint": "eslint .",
     "lint-rules": "eslint --print-config /client/main.jsx",
-    "pretest": "npm run lint --silent"
+    "pretest": "npm run lint --silent",
+    "debug": "meteor test --driver-package=practicalmeteor:mocha --port 3100"
   },
   "dependencies": {
     "babel-runtime": "^6.20.0",
@@ -33,12 +34,12 @@
     "enzyme": "^2.8.0",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^14.1.0",
-    "eslint-import-resolver-meteor": "^0.3.4",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-meteor": "^4.0.1",
     "eslint-plugin-mocha": "^4.9.0",
-    "eslint-plugin-react": "^6.10.3"
+    "eslint-plugin-react": "^6.10.3",
+    "eslint-import-resolver-meteor": "^0.3.4"
   },
   "eslintConfig": {
     "root": "true",
@@ -48,7 +49,8 @@
       "allowImportExportEverywhere": true,
       "ecmaVersion": 6,
       "ecmaFeatures": {
-        "jsx": true
+        "jsx": true,
+        "impliedStrict": true
       },
       "sourceType": "module"
     },
@@ -60,6 +62,7 @@
       "mocha": true
     },
     "plugins": [
+      "import",
       "meteor",
       "react",
       "mocha"
@@ -67,79 +70,46 @@
     "globals": {
       "React": true
     },
+    "extends": [
+      "eslint:recommended",
+      "airbnb",
+      "plugin:react/recommended",
+      "plugin:meteor/recommended"
+    ],
     "settings": {
       "import/resolver": "meteor"
     },
-    "extends": [
-      "eslint:recommended",
-      "plugin:react/recommended",
-      "airbnb",
-      "plugin:mocha/recommended",
-      "plugin:meteor/recommended"
-    ],
     "rules": {
-      "no-invalid-this": "warn",
-      "max-len": "warn",
-      "require-jsdoc": "warn",
-      "padded-blocks": "warn",
-      "no-console": "off",
-      "object-curly-spacing": [
-        "error",
-        "never"
-      ],
-      "indent": [
-        "error",
-        2,
-        { "SwitchCase": 1 }
-      ],
-      "comma-dangle": [
-        "error",
-        {
-          "arrays": "always-multiline",
-          "objects": "always-multiline",
-          "imports": "always-multiline",
-          "exports": "always-multiline"
-        }
-      ],
+
+      "import/extensions": ["error", "never"],
+      "import/no-extraneous-dependencies": "off",
+      "import/no-absolute-path": "warn",
+
       "mocha/no-global-tests": "error",
       "mocha/no-mocha-arrows": "error",
       "mocha/no-exclusive-tests": "error",
       "mocha/handle-done-callback": "error",
       "mocha/no-identical-title": "error",
       "mocha/no-nested-tests": "error",
-      "linebreak-style": [
-        "error",
-        "unix"
-      ],
+
       "quotes": [
         "error",
         "single"
       ],
-      "semi": [
-        "error",
-        "always"
-      ],
-     "import/extensions": ["off", "never"],
-     "react/jsx-filename-extension": [
-       1,
-       {
-         "extensions": [
-           ".js",
-           ".jsx"
-         ]
-       }
-     ],
+
      "no-underscore-dangle": [
-       "error",
-       {
-         "allow": [
-           "_id"
-         ]
-       }
+       "error", { "allow": ["_id"] }
      ],
-     "import/no-extraneous-dependencies": 0,
-     "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
-     "no-use-before-define": ["error", { "functions": false}]
+
+     "no-invalid-this": "warn",
+     "max-len": "warn",
+     "require-jsdoc": "off",
+     "valid-jsdoc": "off",
+     "no-console": "off",
+     "no-debugger": "warn",
+     "no-plusplus": ["warn", { "allowForLoopAfterthoughts": true }],
+     "no-warning-comments": "warn"
+
     }
   }
 }
