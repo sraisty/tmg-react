@@ -72,19 +72,28 @@
     },
     "extends": [
       "eslint:recommended",
+      "plugin:import/warnings",
       "airbnb",
       "plugin:react/recommended",
       "plugin:meteor/recommended"
     ],
     "settings": {
-      "import/resolver": "meteor"
+      "import/resolver": "meteor",
+      "import/core-modules": [
+        "meteor/meteor",
+        "meteor/mongo",
+        "meteor/http",
+        "meteor/accounts-base",
+        "meteor/practicalmeteor:chai",
+        "meteor/practicalmeteor:loglevel",
+
+        "meteor/react-meteor-data",
+        "meteor/check",
+        "meteor/aldeed:simple-schema",
+        "meteor/aldeed:collection2"
+      ]
     },
     "rules": {
-
-      "import/extensions": ["error", "never"],
-      "import/no-extraneous-dependencies": "off",
-      "import/no-absolute-path": "warn",
-
       "mocha/no-global-tests": "error",
       "mocha/no-mocha-arrows": "error",
       "mocha/no-exclusive-tests": "error",
@@ -101,15 +110,19 @@
        "error", { "allow": ["_id"] }
      ],
 
+     "no-plusplus": ["warn", { "allowForLoopAfterthoughts": true }],
      "no-invalid-this": "warn",
      "max-len": "warn",
+
      "require-jsdoc": "off",
      "valid-jsdoc": "off",
      "no-console": "off",
      "no-debugger": "warn",
-     "no-plusplus": ["warn", { "allowForLoopAfterthoughts": true }],
-     "no-warning-comments": "warn"
+     "no-warning-comments": "warn",
 
+     "import/no-absolute-path": "warn",
+     "import/no-extraneous-dependencies": "warn",
+     "import/extensions": ["warn", "never"]
     }
   }
 }

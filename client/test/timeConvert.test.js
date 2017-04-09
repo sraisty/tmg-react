@@ -110,9 +110,9 @@ describe('Test parseEventTime', function () {
       it(tt.timeString, function () {
         const duration = parseEventTime(tt.timeString);
         expect(duration).to.exist;
-        expect(duration.seconds == tt.seconds).to.be.ok;
-        expect(duration.minutes == tt.minutes).to.be.ok;
-        expect(duration.hours == tt.hours).to.be.ok;
+        expect(duration.seconds === tt.seconds).to.be.ok;
+        expect(duration.minutes === tt.minutes).to.be.ok;
+        expect(duration.hours === tt.hours).to.be.ok;
         expect(duration.handTimed).to.equal(tt.handTimed);
       });
     }

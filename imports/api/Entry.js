@@ -1,6 +1,6 @@
 import * as tf from '../../lib/tfconstants';
-import { convertFieldMarkToDist } from './parseConvertDistances';
-import { convertTimeMarkToSeconds } from './parseConvertTimes';
+import { convertFieldMarkToDist } from './distanceConvert';
+import { convertTimeMarkToSeconds } from './timeConvert';
 import { convertHyTekCodes } from './HytekEntries/HytekEntries';
 import { isFieldEvent, isTrackEvent, isRelayEvent } from './meetEventUtils';
 /**

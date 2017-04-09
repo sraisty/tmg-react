@@ -1,7 +1,8 @@
 # TrackMeetGenius 
 An track meet management application by Sue Raisty of SportSimplicity, Inc.
 
-## About this Application
+## Overview
+###Application Architecture Overview
 * Based on Meteor framework. 
 	* React.js for the front-end.  
 	* Node.js and MongoDB on the backend.
@@ -10,16 +11,23 @@ An track meet management application by Sue Raisty of SportSimplicity, Inc.
 apps via Meteor's Cordova integration (with Iconic or React Native for the UI design).
 * Aiming toward a solution that can operate with spotty connectivity, but this is primarily a CONNECTED solution because the cloud enables sharing and mobility, our application's CORE VALUE.
 
+### Development / Build Workflow Overview
 
+## Application Architecture
 ### Meteor
   * MongoDB is the server-side database, and Meteor provides miniMongo as
   the client-side database that is kept in sync with the server MongoDB.
   * Meteor has a built-in builder that automatically compiles and minifies
-  javascript and CSS files. So no need to use Gulp or Grunt or Webpack or whatever.
-  * We are using LESS files for the styles
-* Mocha is the overall testing framework.
+  javascript and style  files. 
+  	* So no need to use Gulp or Grunt or Webpack or whatever.
+  * We're using LESS files for the styles. Meteor automatically compiles these.
+  	
 
-### Theme
+  	
+
+### Front-End
+
+#### Theme
 * For the style, we use the [Angle theme from wrapbootstrap.com](https://wrapbootstrap.com/theme/angle-bootstrap-admin-template-WB04HF123), react variation.  View the [preview here](http://themicon.co/theme/angle/v3.6/reactjs/). 
 	* The help and support for this theme are very limited, but can be found in the comments on [THIS PAGE](https://wrapbootstrap.com/theme/angle-bootstrap-admin-template-WB04HF123/comments). 
 * Meteor isn't playing nice with the SASS or SCSS files that are part of the Angle-React theme, so we are using LESS files that are taken from the Angle-Meteor-Angular theme.
@@ -29,22 +37,24 @@ apps via Meteor's Cordova integration (with Iconic or React Native for the UI de
 * [FontAwesome](http://fontawesome.com) is used as an icon font, as well as a 
 few track & field specific icons from [flaticon](http://flaticon.com).
 
-### Core
-* Prefer using [Lodash](http://lodash.com) library functions for object and array manipulation 
 
-#### Error Handling
-* This article outlines some good principles: [*Best Practices for Error Handling in Node.js*](http://goldbergyoni.com/checklist-best-practices-of-node-js-error-handling/)
-* This one too: https://www.joyent.com/node-js/production/design/errors
-* Handling errors: use the standard Node.js Error object.
-	* GOOD throw from typical function (sync or async)
-	
-			if (!productToAdd) {
-				throw new Error('Cannot add a new product when no value is provided.');
-			}
+#### LESS Files for Style
+* We are using LESS files for almost all the styles and are very rarely using CSS directly.
+   
+	* Meteor automatically, behind the scenes, compiles all the less files it picks up into one big CSS file. This is invisible to us.
+  
+ 	* In this app, Meteor automatically picks up (and compiles) the /client/main.less file, which in turn imports all the other .less files from /imports/styles.
+
+* Less files for bootstrap, fontawesome, etc.  are located in /imports/styles. Almost all these LESS files are from the purchased Angle Theme (see above).
+* To use Less instead of CSS, we need to add the Less Package to Meteor:
+  	
+			$ meteor add less
 
 
+### Core Meteor & Node.js
 
-## NPM & Meteor Packages
+
+#### NPM & Meteor Packages
 * Meteor Packages used are listed in the ./.meteor/packages directory
 * NPM packages are listed in ./packages.json
 
@@ -58,6 +68,10 @@ few track & field specific icons from [flaticon](http://flaticon.com).
 		$ meteor npm install <PACKAGENAME> --save-dev  
   
   (Note that --save or -save-dev add entries into our ~./package.json file)
+  
+#### Important Packages
+
+[Lodash](http://lodash.com) (npm) - Prefer using  library functions for object and array manipulation 
 
 ###Resetting Meteor
 If things go weird:
@@ -84,6 +98,21 @@ If things go weird:
 
 ## React
 
+
+
+
+### Error Handling
+* This article outlines some good principles: [*Best Practices for Error Handling in Node.js*](http://goldbergyoni.com/checklist-best-practices-of-node-js-error-handling/)
+* This one too: https://www.joyent.com/node-js/production/design/errors
+* Handling errors: use the standard Node.js Error object.
+	* GOOD throw from typical function (sync or async)
+	
+			if (!productToAdd) {
+				throw new Error('Cannot add a new product when no value is provided.');
+			}
+
+
+## Debugging
 
 ## Testing
 
@@ -193,10 +222,14 @@ problems with Heroku deployment)
 
 * To push to the remote BitBucket:
 
-		$ git 
+		$ git push origin master
+
 	
 
 ## Heroku
+
+* Setup heroku as a remote server for git, and then I can do
+		$ git push heroku master
 
 * Find the application at [https://tmg-react.herokuapp.com/](https://tmg-react.herokuapp.com/)
 
