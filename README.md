@@ -209,7 +209,7 @@ be erased!  eslint reads them!
 		
 
 
-## Git
+## Git & Bitbucket
 * The remote repository is on Bitbucket.
 * The git repository is in PROJECTDIR/src/.git  (NOT the level above, due to 
 problems with Heroku deployment)
@@ -223,8 +223,13 @@ problems with Heroku deployment)
 * To push to the remote BitBucket:
 
 		$ git push origin master
+		
 
 	
+
+* URL on Bitbucket: 
+[https://surepcinc@bitbucket.org/surepcinc/tmg-react.git](https://surepcinc@bitbucket.org/surepcinc/tmg-react.git)
+
 
 ## Heroku
 
@@ -237,7 +242,15 @@ problems with Heroku deployment)
 
 * Our dev environment is deployed for free on Heroku, for a little while at least. It has access to 1 “dyno” with 512MB for free.
 
-* I set it up using [these instructions](https://www.coshx.com/blog/2016/08/19/how-to-deploy-a-meteor-1-4-app-to-heroku/), using the recommended Horse Buildpack:
+* I set it up using [these instructions](https://www.coshx.com/blog/2016/08/19/how-to-deploy-a-meteor-1-4-app-to-heroku/), using the recommended Horse Buildpack.
+
+* Push the git repository to Heroku and it should automatically deploy after several minutes:
+
+		$ git push heroku master
+		
+
+
+		
 
 
 ### Troubleshooting Heroku
