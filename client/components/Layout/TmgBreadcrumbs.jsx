@@ -1,5 +1,5 @@
 import React from 'react';
-import {Breadcrumb} from 'react-bootstrap';
+import { Breadcrumb } from 'react-bootstrap';
 
 class TmgBreadcrumbs extends React.Component {
 
@@ -9,7 +9,7 @@ class TmgBreadcrumbs extends React.Component {
   }
 
   render() {
-    return(
+    return (
       <Breadcrumb>
         <Breadcrumb.Item href="meets">
           Stanford Invitational 4/30/17

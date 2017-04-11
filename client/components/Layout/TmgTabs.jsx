@@ -1,19 +1,20 @@
 import React from 'react';
-import {Tab, Nav, NavItem} from 'react-bootstrap';
+import { Tab, Nav, NavItem } from 'react-bootstrap';
 
-import MeetEvents from '../../MeetEvents/index.jsx';
-import Teams from '../../Teams/index.jsx';
-import Athletes from '../../Athletes/index.jsx';
-import Scores from '../../Scores/index.jsx';
-import MeetInfo from '../../MeetInfo/index.jsx';
-import MeetAdmin from '../../MeetAdmin/index.jsx';
+import MeetEvents from '../MeetEvents/index';
+import Teams from '../Teams/index';
+import Athletes from '../Athletes/index';
+import Scores from '../Scores/index';
+import MeetInfo from '../MeetInfo/index';
+import MeetAdmin from '../MeetAdmin/index';
+import TmgBreadcrumbs from './TmgBreadcrumbs';
 
 
 class TmgTabs extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {key: 2};
+    this.state = { key: 2 };
   }
   // getInitialState() {
   //   return {
@@ -23,7 +24,7 @@ class TmgTabs extends React.Component {
 
   handleSelect(e) {
     alert(`selected ${e}`);
-    this.setState({key: e});
+    this.setState({ key: e });
   }
 
   render() {
@@ -31,18 +32,21 @@ class TmgTabs extends React.Component {
       <Tab.Container id="meetTabs" defaultActiveKey="meetEvents">
         <div>
           <Nav bsStyle="tabs">
+            <NavItem eventKey="meetInfo">MeetInfo</NavItem>
             <NavItem eventKey="meetEvents">Events</NavItem>
             <NavItem eventKey="teams">Teams</NavItem>
             <NavItem eventKey="athletes">Athletes</NavItem>
             <NavItem eventKey="scores">Scores</NavItem>
             <NavItem eventKey="meetadmin">
-              <em className="fa fa-cog"></em>
+              <em className="fa fa-cog" />
               &nbsp;Meet Admin
             </NavItem>
           </Nav>
 
           <Tab.Content animation>
-            <Tab.Pane eventKey="meetEvents">
+            {this.props.children}
+            {/* <Tab.Pane eventKey="meetEvents">
+              <TmgBreadcrumbs />
               <MeetEvents />
             </Tab.Pane>
             <Tab.Pane eventKey="teams">
@@ -59,7 +63,7 @@ class TmgTabs extends React.Component {
             </Tab.Pane>
             <Tab.Pane eventKey="meetadmin">
               <MeetAdmin />
-            </Tab.Pane>
+            </Tab.Pane> */}
           </Tab.Content>
         </div>
       </Tab.Container>

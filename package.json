@@ -2,31 +2,35 @@
   "name": "tmg-react",
   "version": "1.0.0",
   "private": true,
-  "description": "Track &amp; Field Meet Management on the Web and from mobile device or any web browser",
-  "homepage": "http://sportsimplicty.com",
+  "description": "Track &amp; Field Meet Management from any mobile device",
+  "homepage": "http://sportsimplicity.com",
   "author": "Sue Raisty, SportSimplicity, Inc.",
   "license": " TODO SEE LICENSE IN LICENSE.txt",
-  "main": "main.js",
-  "bugs": "admin@sureproductconsulting.com",
+  "main": "main.jsx",
+  "bugs": {
+    "url": "https://bitbucket.org/surepcinc/tmg-react/admin/issues",
+    "email": "admin@sureproductconsulting.com"
+  },
   "scripts": {
     "start": "meteor run",
     "lint": "eslint .",
-    "lint-rules": "eslint --print-config /client/main.jsx",
     "pretest": "npm run lint --silent",
-    "debug": "meteor test --driver-package=practicalmeteor:mocha --port 3100"
+    "test": "meteor test --driver-package practicalmeteor:mocha --port 3100",
+    "clean": "echo Clean would usually run here",
+    "comment": "Run the following with: meteor npm run-script XXX ",
+    "lintrules": "eslint --print-config /client/main.jsx"
   },
   "dependencies": {
     "babel-runtime": "^6.20.0",
+    "bcrypt": "^1.0.2",
     "csv-parse": "^1.1.7",
     "faker": "^3.1.0",
     "lodash": "^4.17.4",
     "meteor-node-stubs": "~0.2.4",
     "react": "^15.4.2",
-    "react-addons-css-transition-group": "^15.4.2",
     "react-bootstrap": "^0.30.8",
     "react-dom": "^15.4.2",
-    "react-router": "^4.0.0",
-    "react-table": "^5.4.1",
+    "react-router": "3.0.4",
     "xml2json": "^0.10.0"
   },
   "devDependencies": {
@@ -78,7 +82,14 @@
       "plugin:meteor/recommended"
     ],
     "settings": {
-      "import/resolver": "meteor",
+      "import/resolver": {
+        "meteor": {
+          "extensions": [
+            ".js",
+            ".jsx"
+          ]
+        }
+      },
       "import/core-modules": [
         "meteor/meteor",
         "meteor/mongo",
@@ -86,7 +97,6 @@
         "meteor/accounts-base",
         "meteor/practicalmeteor:chai",
         "meteor/practicalmeteor:loglevel",
-
         "meteor/react-meteor-data",
         "meteor/check",
         "meteor/aldeed:simple-schema",
@@ -100,29 +110,42 @@
       "mocha/handle-done-callback": "error",
       "mocha/no-identical-title": "error",
       "mocha/no-nested-tests": "error",
-
       "quotes": [
         "error",
         "single"
       ],
-
-     "no-underscore-dangle": [
-       "error", { "allow": ["_id"] }
-     ],
-
-     "no-plusplus": ["warn", { "allowForLoopAfterthoughts": true }],
-     "no-invalid-this": "warn",
-     "max-len": "warn",
-
-     "require-jsdoc": "off",
-     "valid-jsdoc": "off",
-     "no-console": "off",
-     "no-debugger": "warn",
-     "no-warning-comments": "warn",
-
-     "import/no-absolute-path": "warn",
-     "import/no-extraneous-dependencies": "warn",
-     "import/extensions": ["warn", "never"]
+      "no-underscore-dangle": [
+        "error",
+        {
+          "allow": [
+            "_id",
+            "_ensureIndex",
+            "_verifyEmailToken",
+            "_resetPasswordToken",
+            "_name"
+          ]
+        }
+      ],
+      "no-plusplus": [
+        "warn",
+        {
+          "allowForLoopAfterthoughts": true
+        }
+      ],
+      "no-invalid-this": "warn",
+      "max-len": "warn",
+      "require-jsdoc": "off",
+      "valid-jsdoc": "off",
+      "no-console": "off",
+      "no-debugger": "warn",
+      "no-warning-comments": "warn",
+      "import/no-absolute-path": "warn",
+      "import/no-extraneous-dependencies": "warn",
+      "import/extensions": [
+        "warn",
+        "never"
+      ],
+      "class-methods-use-this": "warn"
     }
   }
 }

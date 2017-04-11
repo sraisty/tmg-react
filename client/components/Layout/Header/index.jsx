@@ -17,10 +17,17 @@ class Header extends React.Component {
   render() {
     return (
       <header>
-        <Navbar inverse fluid collapseOnSelect staticTop className="tmg-top-nav">
+        <Navbar
+          inverse
+          fluid
+          collapseOnSelect
+          staticTop
+          className="tmg-top-nav"
+          id="topnavbar"
+        >
           <Navbar.Header>
             <Navbar.Brand >
-              <a href="#">TrackMeetGenius</a>
+              <a href="/">TrackMeetGenius</a>
             </Navbar.Brand>
             <Navbar.Toggle />
           </Navbar.Header>

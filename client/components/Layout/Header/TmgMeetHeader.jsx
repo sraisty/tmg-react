@@ -10,7 +10,7 @@ class TmgMeetHeader extends React.Component {
       <Navbar fluid className="tmg-meet-header">
         <Navbar.Header>
           <Navbar.Brand>
-          <div className="tmg-meet-header-title">
+          <div className="tmg-meet-header-title" id="meet-title">
             Stanford Invitational
           </div>
           </Navbar.Brand>

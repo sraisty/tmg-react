@@ -6,5 +6,6 @@
     "loglevel": {
       "default": "trace"
     }
-  }
+  },
+  "private": {}
 }

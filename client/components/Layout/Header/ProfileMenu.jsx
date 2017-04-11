@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {MenuItem, NavDropdown} from 'react-bootstrap';
+import { MenuItem, NavDropdown } from 'react-bootstrap';
 
 class ProfileMenu extends React.Component {
 
@@ -10,9 +10,12 @@ class ProfileMenu extends React.Component {
   }
 
   render() {
-    return(
-      <NavDropdown eventKey={4}
-            title="Profile" id="profile-nav-dropdown">
+    return (
+      <NavDropdown
+        eventKey={4}
+        title="Profile"
+        id="profile-nav-dropdown"
+      >
         <MenuItem header>Signed in as xxxx</MenuItem>
         <MenuItem divider />
         <MenuItem eventKey={4.1}>Your profile</MenuItem>
