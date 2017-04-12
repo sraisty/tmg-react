@@ -58,9 +58,9 @@ class TmgTabs extends React.Component {
           </div>
 
           <div className="col-sm-12">
-            <Tab.Content animation>
+            <Tab.Pane animation>
               {this.props.tabsinfo[this.state.selected].comp}
-            </Tab.Content>
+            </Tab.Pane>
           </div>
         </div>
 

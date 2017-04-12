@@ -17,7 +17,7 @@ class Base extends React.Component {
     super(props);
     this.tabsinfo = [
       { name: 'meetinfo', title: 'Meet Info', comp: <MeetInfo /> },
-      { name: 'events', title: 'Event', comp: <MeetEvents /> },
+      { name: 'events', title: 'Events', comp: <MeetEvents /> },
       { name: 'athletes', title: 'Athletes', comp: <Athletes /> },
       { name: 'teams', title: 'Teams', comp: <Teams /> },
       { name: 'scores', title: 'Scores', comp: <Scores /> },
