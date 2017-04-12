@@ -39,7 +39,6 @@ class Base extends React.Component {
             selected={0}
             tabsinfo={this.tabsinfo}
           >
-
             {/* <TmgTab title="Meet Information" id="meetinfo">
               <div>insideTmgTab singular</div>
             </TmgTab> */}

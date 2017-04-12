@@ -21,7 +21,6 @@ Meteor.startup(() => {
       <Route path="/" component={Base}>
         <Route component={TmgTabs}>
           <IndexRedirect to="info" />
-          {/* <IndexRoute component={MeetEvents} /> */}
           <Route path="events" component={MeetEvents} />
           <Route path="athletes" component={Athletes} />
           <Route path="teams" component={Teams} />

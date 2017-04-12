@@ -36,13 +36,19 @@ class TmgTabs extends React.Component {
         id="tabs-with-routing-links"
       >
         <div className="row clearfix">
+
           <div className="col-sm-12">
             <Nav bsStyle="tabs">
 
               {this.props.tabsinfo.map((tab, index) => {
                 return (
                   <LinkContainer to={`/${tab.name}`} key={tab.name}>
-                    <NavItem eventKey={index} href={`/${tab.name}`}>
+                    <NavItem
+                      eventKey={index}
+                      href={`/${tab.name}`}
+                      className={
+                        (index === this.state.selected) ? 'active' : ''}
+                    >
                       {tab.title}
                     </NavItem>
                   </LinkContainer>
@@ -50,6 +56,7 @@ class TmgTabs extends React.Component {
               })}
             </Nav>
           </div>
+
           <div className="col-sm-12">
             <Tab.Content animation>
               {this.props.tabsinfo[this.state.selected].comp}
