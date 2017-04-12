@@ -1,71 +1,62 @@
 import React from 'react';
-import { Tab, Nav, NavItem } from 'react-bootstrap';
-
-import MeetEvents from '../MeetEvents/index';
-import Teams from '../Teams/index';
-import Athletes from '../Athletes/index';
-import Scores from '../Scores/index';
-import MeetInfo from '../MeetInfo/index';
-import MeetAdmin from '../MeetAdmin/index';
-import TmgBreadcrumbs from './TmgBreadcrumbs';
-
+import { Tab, Tabs, Nav, NavItem } from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap';
 
 class TmgTabs extends React.Component {
-
   constructor(props) {
     super(props);
-    this.state = { key: 2 };
-  }
-  // getInitialState() {
-  //   return {
-  //     key: 1
-  //   };
-  // },
+    this.displayName = 'TmgTabs';
+    this.state = {
+      selected: 0,
+    };
+    // this.propTypes = {
+    //   selected: React.PropTypes.number,
+    //   // children: React.PropTypes.oneOfType([
+    //   //   React.PropTypes.array,
+    //   //   React.PropTypes.element
+    //   // ]).isRequired,
+    // };
+    // this.handleClick = this.handleClick.bind(this);
+    this.handleSelect = this.handleSelect.bind(this);
+  }  // constructor
 
-  handleSelect(e) {
-    alert(`selected ${e}`);
-    this.setState({ key: e });
+  handleSelect(index) {
+    // event.preventDefault();
+    console.log(`handleSelect selected ${index}`);
+    this.setState({ selected: index });
   }
+
 
   render() {
     return (
-      <Tab.Container id="meetTabs" defaultActiveKey="meetEvents">
-        <div>
-          <Nav bsStyle="tabs">
-            <NavItem eventKey="meetInfo">MeetInfo</NavItem>
-            <NavItem eventKey="meetEvents">Events</NavItem>
-            <NavItem eventKey="teams">Teams</NavItem>
-            <NavItem eventKey="athletes">Athletes</NavItem>
-            <NavItem eventKey="scores">Scores</NavItem>
-            <NavItem eventKey="meetadmin">
-              <em className="fa fa-cog" />
-              &nbsp;Meet Admin
-            </NavItem>
-          </Nav>
+      // <Tab.Container id="tabs-with-routing-links" defaultActiveKey="meetInfo">
+      <Tab.Container
+        activeKey={this.state.selected}
+        onSelect={this.handleSelect}
+        id="tabs-with-routing-links"
+      >
+        <div className="row clearfix">
+          <div className="col-sm-12">
+            <Nav bsStyle="tabs">
 
-          <Tab.Content animation>
-            {this.props.children}
-            {/* <Tab.Pane eventKey="meetEvents">
-              <TmgBreadcrumbs />
-              <MeetEvents />
-            </Tab.Pane>
-            <Tab.Pane eventKey="teams">
-              <Teams />
-            </Tab.Pane>
-            <Tab.Pane eventKey="athletes">
-              <Athletes />
-            </Tab.Pane>
-            <Tab.Pane eventKey="scores">
-              <Scores />
-            </Tab.Pane>
-            <Tab.Pane eventKey="meetinfo">
-              <MeetInfo />
-            </Tab.Pane>
-            <Tab.Pane eventKey="meetadmin">
-              <MeetAdmin />
-            </Tab.Pane> */}
-          </Tab.Content>
+              {this.props.tabsinfo.map((tab, index) => {
+                return (
+                  <LinkContainer to={`/${tab.name}`} key={tab.name}>
+                    <NavItem eventKey={index} href={`/${tab.name}`}>
+                      {tab.title}
+                    </NavItem>
+                  </LinkContainer>
+                );
+              })}
+            </Nav>
+          </div>
+          <div className="col-sm-12">
+            <Tab.Content animation>
+              {this.props.tabsinfo[this.state.selected].comp}
+            </Tab.Content>
+          </div>
         </div>
+
       </Tab.Container>
     );
   }

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Nav, Navbar } from 'react-bootstrap';
+import { Link } from 'react-router';
 
 import ChooseMeetMenu from './ChooseMeetMenu';
 import SearchMeets from './SearchMeets';
@@ -27,7 +28,7 @@ class Header extends React.Component {
         >
           <Navbar.Header>
             <Navbar.Brand >
-              <a href="/">TrackMeetGenius</a>
+              <Link to="/">TrackMeetGenius</Link>
             </Navbar.Brand>
             <Navbar.Toggle />
           </Navbar.Header>
