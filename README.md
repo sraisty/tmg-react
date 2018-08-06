@@ -1,5 +1,5 @@
 # TrackMeetGenius 
-An track meet management application by Sue Raisty of SportSimplicity, Inc.
+An track meet management application prototype by Sue Raisty
 
 ## Overview
 ###Application Architecture Overview
@@ -9,7 +9,7 @@ An track meet management application by Sue Raisty of SportSimplicity, Inc.
 * 100% Javascript, primarily the ES6 variant of Javascript.
 * Currently a hybrid application, but down the road hope to do Native iOS and Android 
 apps via Meteor's Cordova integration (with Iconic or React Native for the UI design).
-* Aiming toward a solution that can operate with spotty connectivity, but this is primarily a CONNECTED solution because the cloud enables sharing and mobility, our application's CORE VALUE.
+* Aiming toward a solution that can operate with spotty connectivity down the road, but this is primarily a CONNECTED solution because the cloud enables sharing and mobility, the application's CORE VALUE.
 
 ### Development / Build Workflow Overview
 
@@ -20,7 +20,7 @@ apps via Meteor's Cordova integration (with Iconic or React Native for the UI de
   * Meteor has a built-in builder that automatically compiles and minifies
   javascript and style  files. 
   	* So no need to use Gulp or Grunt or Webpack or whatever.
-  * We're using LESS files for the styles. Meteor automatically compiles these.
+  * I'm using LESS files for the styles. Meteor automatically compiles these.
   	
 
   	
@@ -28,25 +28,23 @@ apps via Meteor's Cordova integration (with Iconic or React Native for the UI de
 ### Front-End
 
 #### Theme
-* For the style, we use the [Angle theme from wrapbootstrap.com](https://wrapbootstrap.com/theme/angle-bootstrap-admin-template-WB04HF123), react variation.  View the [preview here](http://themicon.co/theme/angle/v3.6/reactjs/). 
+* For the style, I used the [Angle theme from wrapbootstrap.com](https://wrapbootstrap.com/theme/angle-bootstrap-admin-template-WB04HF123), react variation.  View the [preview here](http://themicon.co/theme/angle/v3.6/reactjs/). 
 	* The help and support for this theme are very limited, but can be found in the comments on [THIS PAGE](https://wrapbootstrap.com/theme/angle-bootstrap-admin-template-WB04HF123/comments). 
 * Meteor isn't playing nice with the SASS or SCSS files that are part of the Angle-React theme, so we are using LESS files that are taken from the Angle-Meteor-Angular theme.
-
 * The theme is based on [Twitter Bootstrap](http://getbootstrap.com).
-
 * [FontAwesome](http://fontawesome.com) is used as an icon font, as well as a 
 few track & field specific icons from [flaticon](http://flaticon.com).
 
 
 #### LESS Files for Style
-* We are using LESS files for almost all the styles and are very rarely using CSS directly.
+* I am using LESS files for almost all the styles and are very rarely using CSS directly.
    
-	* Meteor automatically, behind the scenes, compiles all the less files it picks up into one big CSS file. This is invisible to us.
+	* Meteor automatically, behind the scenes, compiles all the less files it picks up into one big CSS file. This is invisible to me.
   
  	* In this app, Meteor automatically picks up (and compiles) the /client/main.less file, which in turn imports all the other .less files from /imports/styles.
 
 * Less files for bootstrap, fontawesome, etc.  are located in /imports/styles. Almost all these LESS files are from the purchased Angle Theme (see above).
-* To use Less instead of CSS, we need to add the Less Package to Meteor:
+* To use Less instead of CSS, I need to add the Less Package to Meteor:
   	
 			$ meteor add less
 
@@ -116,7 +114,7 @@ If things go weird:
 
 ## Testing
 
-Mocha and the practicalmeteor:mocha package are the basis of our testing framework.
+Mocha and the practicalmeteor:mocha package are the basis of my testing framework.
 
 ### Using Mocha
 * Don't use arrow functions. Use the eslint mocha plugin to override the usual AirBnb rule that demands arrow functions.
